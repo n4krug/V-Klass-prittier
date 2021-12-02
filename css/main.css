@@ -286,7 +286,8 @@ h3 {
 
 .newsDate,
 .newsInfo,
-a {
+a,
+b {
 	color: var(--text-color-200) !important;
 }
 
@@ -305,4 +306,8 @@ a {
 
 #toggleBarFlaerp {
 	background-image: var(--menu-url) !important;
+}
+
+#myToolsBox {
+	background-color: var(--background-color-400) !important;
 }
