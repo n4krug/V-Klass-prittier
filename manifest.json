@@ -1,21 +1,29 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
    
     "name": "Modify CSS and HTML for V-Klass",
     "version": "0.1.0",
     "description": "Makes V-Klass prittier and adds darkmode",
    
     "background": {
-        "scripts": [
-            "script.js"
-        ],
-        "persistent": false
+        "service_worker": "script.js"
+        
+        // "persistent": false
     },
 
     "permissions": [
-        "https://www.vklass.se/",
-        "tabs"
-    ]
+        "tabs",
+        "storage",
+        "scripting"
+    ],
+
+    "host_permissions": [
+        "https://www.vklass.se/"
+    ],
+
+    "action": {
+        "default_popup": "popup.html"
+    }
 
     // "content_scripts": [{
     // //   "css": ["css/main.css"],
