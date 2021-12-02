@@ -1,0 +1,349 @@
+// JavaScript funktioner 
+/// <reference path="/js/lib/jquery-vsdoc.js" />
+//Funktion för att kontrollera e-postadress
+String.prototype.isValidEmail = function () {
+    return !!this.match( /^([a-zA-Z0-9]{1}([a-zA-Z0-9\.\-\_]*)[a-zA-Z0-9]{1})@([a-zA-Z0-9]{1}([a-zA-Z0-9\.\-\_]*)[a-zA-Z0-9]{1})\.([a-zA-Z]{2,4})$/ );
+};
+String.prototype.isValidMapName = function () {
+    return this.match( /^\s|\s$|\\|\/|\?|<|>|:|\*|\||"|\t/ );
+};
+String.prototype.isValidFileName = function () {
+    return this.match( /^\s|\s$|\\|\/|\?|<|>|:|\*|\||"|\t/ );
+};
+//Funktion att kontrollera datum
+String.prototype.isValidDate = function(){
+	if(!this.match(/^(\d{4})\-(\d{2})\-(\d{2})$/)){ return false; }
+	return (RegExp.$3<=new Date(RegExp.$1,RegExp.$2,0).getDate()&&RegExp.$3>0&&RegExp.$2<13&&RegExp.$2>0);
+};
+//Funktion för att kontrollera personnummer
+function personnummer(nr){
+	this.valid=false;
+	if(!nr.match(/^(\d{2})(\d{2})(\d{2})\-(\d{4})$/)){ return false; }
+	this.now=new Date(); this.nowFullYear=this.now.getFullYear()+""; this.nowCentury=this.nowFullYear.substring(0,2); this.nowShortYear=this.nowFullYear.substring(2,4);
+	this.year=RegExp.$1; this.month=RegExp.$2; this.day=RegExp.$3; this.controldigits=RegExp.$4;
+	this.fullYear=(this.year*1<=this.nowShortYear*1)?(this.nowCentury+this.year)*1:((this.nowCentury*1-1)+this.year)*1;
+	var months = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+	if(this.fullYear%400==0||this.fullYear%4==0&&this.fullYear%100!=0){ months[1]=29; }
+	if(this.month*1>12||this.day*1>months[this.month*1-1]){ return false; }
+	this.alldigits=this.year+this.month+this.day+this.controldigits;
+	var nn="";
+    var n;
+    for(n = 0;n<this.alldigits.length;n++){ nn+=((((n+1)%2)+1)*this.alldigits.substring(n,n+1)); }
+	this.checksum=0;
+	for(n = 0;n<nn.length;n++){ this.checksum+=nn.substring(n,n+1)*1; }
+	this.valid=(this.checksum%10==0)?true:false;
+	this.sex=parseInt(this.controldigits.substring(2,3))%2;
+}
+
+function left(str,n){
+  return str.substring(0,n);
+}
+
+function right(str,n){
+  return str.substring(str.length-n);
+}
+
+String.prototype.isValidTime = function(){
+   if(this.match(/(\d{2}):(\d{2})/) != null){
+      var h = parseInt(RegExp.$1,10);
+      var m = parseInt(RegExp.$2,10);
+      if(h >= 0 && h <= 23 && m >= 0 && m <= 59)
+         return true;
+   }
+   return false;
+};
+
+
+function showHide(id){
+   if(document.getElementById(id).style.display=='none'){
+     document.getElementById(id).style.display='';
+   }else{
+     document.getElementById(id).style.display='none';
+   }
+}
+
+function showHideBlock(id) {
+    if (document.getElementById(id).style.display == 'none') {
+        document.getElementById(id).style.display = 'block';
+    } else {
+        document.getElementById(id).style.display = 'none';
+    }
+}
+
+function toggleAll(formName, toggleCB){
+     for(var i=0; i<formName.elements.length; i++){
+       if(formName.elements[i].type == "checkbox"){
+           if(!(formName.elements[i].disabled)){
+			     if(formName.elements[i].id != toggleCB){
+			       if(document.getElementById(toggleCB).checked == true)
+				       formName.elements[i].checked = true;
+				     else
+				       formName.elements[i].checked = false;
+			     }
+			     }
+			   }
+     }
+}
+
+function tabPersnr(input){
+	obj=document.getElementById(input);
+	if(obj.value.length<12){
+		if(obj.value.length==6){
+			obj.value=obj.value+'-';
+		}
+	}
+	else{
+	  obj.value = left(obj.value,11);
+  }
+	for(i=1;i<=obj.value.length;i++){
+		if(i!=6){
+		  if(!(obj.value.substr(i-1,1).match(/^\d+$/))){
+			  obj.value = obj.value.replace(obj.value.substr(i-1,1), '');
+			}
+		}else{
+			if(!(obj.value.substr(i,1)=='-')){
+			  obj.value = obj.value.replace(obj.value.substr(i,1), '-');
+			}
+			i++;
+		}
+	}
+}
+
+function writeCookie(name, data, noDays){
+  var cookieStr = name + "="+ data;
+    if (writeCookie.arguments.length > 2){
+    cookieStr += "; expires=" + getCookieExpireDate(noDays);
+    }
+  document.cookie = cookieStr;
+}
+
+function getCookieExpireDate(noDays){
+  var today = new Date();
+    var expr = new Date(today.getTime()+noDays*24*60*60*1000);
+    return  expr.toGMTString();
+}
+          
+function readCookie(cookieName){
+   var searchName = cookieName + "=";
+    var cookies = document.cookie;
+    var start = cookies.indexOf(cookieName);
+    if (start == -1){ // cookie not found
+     return "";
+    }
+   start += searchName.length; //start of the cookie data
+   var end = cookies.indexOf(";", start);
+    if (end == -1){
+     end = cookies.length;
+    }
+   return cookies.substring(start, end);
+}
+
+function getFilename(str) {
+    var flag = 0;
+    while (flag != -1) {
+        flag = str.indexOf('\\');
+        if (flag != -1) {
+            str = str.substring(flag + 1);
+        }
+    }
+    return str;
+}
+
+var $overlay_wrapper;
+var $overlay_panel;
+
+function show_overlay() {
+    if (!$overlay_wrapper) append_overlay();
+    $overlay_wrapper.fadeIn(700);
+}
+
+function hide_overlay() {
+    $overlay_wrapper.fadeOut(500);
+}
+
+function append_overlay() {
+    $overlay_wrapper = $('<div id="overlay"></div>').appendTo($('BODY'));
+    $overlay_panel = $('<div id="overlay-panel"></div>').appendTo($overlay_wrapper);
+    $overlay_panel.html('');
+    attach_overlay_events();
+}
+
+function attach_overlay_events() {
+    $('A.hide-overlay', $overlay_wrapper).click(function(ev) {
+        ev.preventDefault();
+        hide_overlay();
+    });
+}
+
+$(function() {
+    $('A.show-overlay').click(function(ev) {
+        ev.preventDefault();
+        show_overlay();
+    });
+});
+function OnClientclose(sender, eventArgs) {
+    hide_overlay();
+}
+
+function OnClientshow(sender, eventArgs) {
+    show_overlay();
+}
+
+function extractTags(extractFieldID, tagsFieldID){
+    var strTag = $("input#" + tagsFieldID).attr("value");
+    var strExtractText = $("textarea#" + extractFieldID).attr("value");
+    var returnTags = $.ajax({ type: "GET", url: "/Handler/ExtractTags.ashx?description=" + strExtractText + "&tags=" + strTag, async: false }).responseText;
+    $("input#" + tagsFieldID).val(returnTags);
+}
+
+// Alert och Confirm funktioner
+
+function ConfirmCheckbox(selector, message) {
+    var isFinishedChecked = $(selector).attr('checked') ? true : false;
+    if (isFinishedChecked) {
+        return confirm(message);
+    }
+}
+
+function Confirm_Delete(message) {
+    if (confirm(message) == true)
+        return true;
+    else
+        return false;
+}
+
+jQuery.fn.autoGrow = function () {
+    return this.each(function () {
+        // Variables
+        var colsDefault = this.cols;
+        var rowsDefault = this.rows;
+
+        //Functions
+        var grow = function () {
+            growByRef(this);
+        };
+        var growByRef = function (obj) {
+            var linesCount = 0;
+            var lines = obj.value.split('\n');
+
+            for (var i = lines.length - 1; i >= 0; --i) {
+                linesCount += Math.floor((lines[i].length / colsDefault) + 1);
+            }
+
+            if (linesCount >= rowsDefault)
+                obj.rows = linesCount + 1;
+            else
+                obj.rows = rowsDefault;
+        };
+        var characterWidth = function (obj) {
+            var characterWidth = 0;
+            var temp1 = 0;
+            var temp2 = 0;
+            var tempCols = obj.cols;
+
+            obj.cols = 1;
+            temp1 = obj.offsetWidth;
+            obj.cols = 2;
+            temp2 = obj.offsetWidth;
+            characterWidth = temp2 - temp1;
+            obj.cols = tempCols;
+
+            return characterWidth;
+        }; // Manipulations
+        this.style.width = "auto";
+        this.style.height = "auto";
+        this.style.overflow = "hidden";
+        this.style.width = ((characterWidth(this) * this.cols) + 6) + "px";
+        this.onkeyup = grow;
+        this.onfocus = grow;
+        this.onblur = grow;
+        growByRef(this);
+    });
+};
+
+
+jQuery.fn.MoreLessButtons = function (rowCount, filterObj) {
+    
+    return this.each(function () {
+
+        var trs;
+        var btnMore;
+        var btnLess;
+        var trsLength;
+        //var rowCount = 10;
+        var currentIndex = rowCount;
+        var currentID = $(this)[0].id;
+
+        trs = $(this).find(filterObj);
+        $(this).after("<div class='morelesscontainer'><a class='showlessbtn' data-id='" + currentID + "'>F&auml;rre</a><a class='showmorebtn' data-id='" + currentID + "'>" + VKresources.More + "</a></div>");
+        trsLength = trs.length;
+
+        trs.hide();
+        trs.slice(0, rowCount).show();
+        checkButton();
+
+
+        $(".showmorebtn[data-id='" + currentID + "']").click(function (e) {
+            e.preventDefault();
+            trs.slice(currentIndex, currentIndex + rowCount).show();
+            currentIndex += rowCount;
+            checkButton();
+            return false;
+        });
+
+        $(".showlessbtn[data-id='" + currentID + "']").click(function (e) {
+            e.preventDefault();
+            trs.slice(currentIndex - rowCount, currentIndex).hide();
+            currentIndex -= rowCount;
+            checkButton();
+            return false;
+        });
+
+        
+        function checkButton() {
+            var currentLength = trs.filter(":visible").length;
+
+            if (currentLength >= trsLength) {
+                $(".showmorebtn[data-id='" + currentID + "']").hide();
+                $(".showlessbtn[data-id='" + currentID + "']").css("border-bottom-right-radius", "3px");
+            } else {
+                $(".showmorebtn[data-id='" + currentID + "']").show();
+                $(".showlessbtn[data-id='" + currentID + "']").css("border-bottom-right-radius", "0");
+            }
+
+            if (trsLength > rowCount && currentLength > rowCount) {
+                $(".showlessbtn[data-id='" + currentID + "']").show();
+                $(".showmorebtn[data-id='" + currentID + "']").css("border-bottom-left-radius", "0");
+            } else {
+                $(".showlessbtn[data-id='" + currentID + "']").hide();
+                $(".showmorebtn[data-id='" + currentID + "']").css("border-bottom-left-radius", "3px");
+            }
+
+        };
+        
+        return this;
+        
+    });
+
+};
+
+//Printa
+function PrintPanel(elementId, extraCss) {
+
+    var panel = document.getElementById(elementId);
+    var printWindow = window.open('', '', 'height=800,width=1000');
+    printWindow.document.write('<html><head><title>' + VKresources.Document + '</title>');
+    if (extraCss)
+        printWindow.document.write('<style type="text/css">' + extraCss + '</style>');
+    printWindow.document.write('</head><body >');
+    printWindow.document.write('<h2>' + $("h1:first").text() + '</h2>');
+    printWindow.document.write('<div style="width:600px">');
+    printWindow.document.write(panel.innerHTML);
+    printWindow.document.write('</div>');
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    setTimeout(function () {
+        printWindow.print();
+    }, 1);
+    return false;
+}

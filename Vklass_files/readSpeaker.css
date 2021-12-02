@@ -1,0 +1,7 @@
+﻿#readspeaker_button1 {
+    position: absolute;
+    min-width: 400px;
+    z-index: 10000;
+    left: 13px;
+    top: 9px;
+}

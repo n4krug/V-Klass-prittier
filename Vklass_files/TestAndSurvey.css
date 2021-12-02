@@ -1,0 +1,20 @@
+﻿.list td.test { background-color:#ff4a00; }
+
+.statusinfo { background-color:#B3B3B3; line-height:30px; padding-left:11px; color:#fff; margin-top:0px; margin-right:5px; margin-bottom:1px; font-size: 11px; }
+
+.testQuestion { padding:10px; }
+
+.testQuestion h3 { padding:10px 0px 5px 0px; margin:0px 0px 0px 0px; clear:both; }
+.testQuestion input[type="radio"] { margin:1px 0px 3px 0px; padding:0px; float:left; clear:both; }
+.testQuestion input[type="checkbox"] { margin:1px 0px 3px 0px; padding:0px; float:left; clear:both; }
+.testQuestion label { margin:0px 0px 3px 7px; padding:0px; float:left;}
+
+
+.actions .next * { background-image:url("images/buttons/next.png"); text-indent:14px; }
+
+
+.testResult { padding:10px; }
+.testResult h4 { padding:0px; }
+.testResult ul { padding:0px; list-style:none; }
+.testResult ul li { display:block; border-bottom:1px solid #FFF; margin-bottom:5px; padding-bottom:5px; }
+.testResult ul li:first-child { border-top:1px solid #fff; }

@@ -1,0 +1,36 @@
+﻿function StopVideo(trigger) {
+    var id = $(trigger).attr('id').match(/\d+/g)[0];
+    //$("#VideoButtonPanel_" + id).hide();
+    jwplayer("viewPlayer_" + id).stop();
+    $("#viewPlayer_" + id + "_wrapper").animate({
+        width: "0px",
+        height: "0px"
+    }, 100);
+    $("#VideoThumbnailPanel_" + id).delay(100).show(0);
+}
+
+function PlayVideo(trigger, playerWidth, playerHeight) {
+    var id = $(trigger).attr('id').match(/\d+/g)[0];
+    $("#VideoThumbnailPanel_" + id).hide();
+    //$("#VideoButtonPanel_" + id).show();
+    $("#viewPlayer_" + id + "_wrapper").animate({
+        width: playerWidth + "px",
+        height: playerHeight + "px"
+    }, 100);
+}
+
+function RemoveVideo(Id, ConfirmMessage, VideoValueFieldId, ViewPanelId, RecordingPanelId) {
+    if (window.confirm(ConfirmMessage)) {
+        $.ajax({
+            type: "POST",
+            url: "/Handler/VideoRecording.ashx?action=remove",
+            data: { recordingid: Id },
+            dataType: "text",
+            success: function (data) {
+                $("#" + VideoValueFieldId).val(data);
+                $("#" + ViewPanelId).hide("slow");
+                $("#" + RecordingPanelId).show("slow");
+            }
+        });
+    }
+}
