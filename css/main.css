@@ -44,6 +44,31 @@ html {
 	background-color: var(--background-color-100) !important;
 }
 
+table {
+	border-radius: var(--border-radius) !important;
+	overflow: hidden !important;
+	width: 100% !important;
+}
+
+.list {
+	background-color: var(--background-color-300) !important;
+}
+
+td {
+	border-color: var(--background-color-500) !important;
+	color: var(--text-color-200) !important;
+}
+
+th {
+	border: 0 !important;
+}
+
+table thead {
+	background-color: var(--background-color-400) !important;
+	color: var(--text-color-500) !important;
+	border-color: var(--background-color-100) !important;
+}
+
 .bodyContainer {
 	width: unset !important;
 	max-width: 1500px !important;
@@ -369,36 +394,20 @@ b {
 table.time-table th,
 table.time-table td.dayevents,
 table.time-table td.toggleEventBox,
-.time-table,
-table thead {
-	background-color: var(--background-color-400) !important;
+.time-table {
+	background-color: var(--background-color-300) !important;
 	color: var(--text-color-500) !important;
 	border-color: var(--background-color-100) !important;
+}
+
+.time-table .emptyCell {
+	background-color: var(--background-color-200) !important;
 }
 
 table.time-table td.resv-span6 {
 	background-color: var(--background-color-400) !important;
 	color: var(--text-color-500) !important;
 	border-color: var(--background-color-100) !important;
-}
-
-table {
-	border-radius: var(--border-radius) !important;
-	overflow: hidden !important;
-	width: 100% !important;
-}
-
-.list {
-	background-color: var(--background-color-300) !important;
-}
-
-td {
-	border-color: var(--background-color-500) !important;
-	color: var(--text-color-200) !important;
-}
-
-th {
-	border: 0 !important;
 }
 
 .list td.kurs {
