@@ -62,6 +62,7 @@ html {
 
 .article {
 	margin-left: 32.5rem !important;
+	width: unset !important;
 }
 
 .scoreboard {
@@ -83,6 +84,10 @@ html {
 
 .vellinge-text {
 	fill: #ffffff !important;
+}
+
+.nav {
+	display: block !important;
 }
 
 .nav h2 {
@@ -158,7 +163,7 @@ html {
 	border-radius: var(--border-radius) !important;
 }
 
-.nav ul.leftmenu li:hover {
+.bodyContainer .nav ul.leftmenu li:hover {
 	background-color: var(--background-color-500) !important;
 }
 
@@ -232,6 +237,8 @@ span {
 	background-color: var(--background-color-300) !important;
 	color: var(--text-color-500) !important;
 	margin-right: unset !important;
+	border-radius: var(--border-radius) !important;
+	margin-bottom: 1rem !important;
 }
 
 .metainfo strong {
@@ -241,6 +248,8 @@ span {
 .start-top {
 	width: unset !important;
 	display: flex !important;
+	border-radius: var(--border-radius) !important;
+	overflow: hidden !important;
 }
 
 .start-left {
@@ -310,4 +319,88 @@ b {
 
 #myToolsBox {
 	background-color: var(--background-color-400) !important;
+}
+
+.hide-menu-button,
+#showmainmenubutton,
+.nav-small {
+	display: none !important;
+}
+
+#schemeContainer,
+#SchemeNav,
+.headline {
+	width: unset !important;
+}
+
+.time-table {
+	width: 100% !important;
+	max-width: unset !important;
+}
+
+.rtsLink,
+.headline {
+	background-color: var(--background-color-400) !important;
+}
+
+.scheme-actions-students li * {
+	background-color: var(--background-color-400) !important;
+	padding: 0rem 1rem !important;
+	border-radius: var(--border-radius);
+}
+
+.scheme-actions-students li *:hover {
+	background-color: var(--background-color-500);
+}
+
+.scheme-actions-students .timetable * {
+	background-image: var(--timetable-calendar-url) !important;
+}
+
+.scheme-actions-students .subscribe * {
+	background-image: var(--timetable-feed-url) !important;
+}
+
+.scheme-actions-students .print * {
+	background-image: var(--timetable-print-url) !important;
+}
+
+.time-table .emptyCell,
+table.time-table th,
+table.time-table td.dayevents,
+table.time-table td.toggleEventBox,
+.time-table,
+table thead {
+	background-color: var(--background-color-400) !important;
+	color: var(--text-color-500) !important;
+	border-color: var(--background-color-100) !important;
+}
+
+table.time-table td.resv-span6 {
+	background-color: var(--background-color-400) !important;
+	color: var(--text-color-500) !important;
+	border-color: var(--background-color-100) !important;
+}
+
+table {
+	border-radius: var(--border-radius) !important;
+	overflow: hidden !important;
+	width: 100% !important;
+}
+
+.list {
+	background-color: var(--background-color-300) !important;
+}
+
+td {
+	border-color: var(--background-color-500) !important;
+	color: var(--text-color-200) !important;
+}
+
+th {
+	border: 0 !important;
+}
+
+.list td.kurs {
+	background-image: var(--course-url) !important;
 }

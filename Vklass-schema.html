@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://www.vklass.se/schema.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sv-se" xml:lang="sv-se" class="t-chrome t-chrome96"><head server="WEBFRONT08"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Vklass
+</title><link href="https://www.vklass.se/favicon.ico" rel="shortcut icon" type="image/x-icon"><script type="text/javascript" src="./Vklass-schema_files/JavaScriptResourceHandler.axd"></script>
+    <script src="./Vklass-schema_files/jquery.js.nedladdning" type="text/javascript"></script>
+    <script src="./Vklass-schema_files/javaFunctions.js.nedladdning" type="text/javascript"></script>
+    <script src="./Vklass-schema_files/readSpeaker.js.nedladdning" type="text/javascript"></script>
+    <link rel="stylesheet" href="./Vklass-schema_files/colorbox.css" type="text/css" media="screen"><link rel="stylesheet" href="./Vklass-schema_files/readSpeaker.css" type="text/css" media="screen">
+    <link href="./Vklass-schema_files/StyleSheet_20211201.css" type="text/css" rel="stylesheet"><link href="./Vklass-schema_files/TestAndSurvey.css" type="text/css" rel="stylesheet"><link href="./Vklass-schema_files/TokenInput.css" type="text/css" rel="stylesheet"><link href="./Vklass-schema_files/Telerik.Web.UI.WebResource.axd" type="text/css" rel="stylesheet"><style type="text/css">
+    @font-face {
+        font-family: 'RedHatDisplay';
+        src: url('chrome-extension://bmikpgodpkclnkgmnpphehdgcimmided/fonts/RedHatDisplay-Medium.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'RedHatDisplay';
+        src: url('chrome-extension://bmikpgodpkclnkgmnpphehdgcimmided/fonts/RedHatDisplay-Bold.otf') format('opentype');
+        font-weight: bold;
+        font-style: normal;
+    }
+    .myki-preloader-input {
+        transform: translateX(0px) !important;
+    }
+</style>
+
+<link rel="stylesheet" href="colorSchemes/midday.css">
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body id="ctl00_pagebody" style="background-image: url(&quot;App_Themes/Vklass/images/top-small.png&quot;); background-repeat: no-repeat; background-position: center top;">
+    <form name="aspnetForm" method="post" action="https://www.vklass.se/schema.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_ctl05_TSSM" id="ctl00_ctl05_TSSM" value=";Telerik.Web.UI, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4:sv-SE:03e3fdef-45f6-40a0-88ab-9645d53a0f37:8cee9284:ed057d30:a3b7d93f:92753c09:1c2121e:e24b8e95:91f742eb;Telerik.Web.UI.Skins, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4:sv-SE:ec15cfdd-3d98-479c-9377-1f0bd05448f9:bf721433">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Vklass-schema_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./Vklass-schema_files/ScriptResource.axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(2).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(3).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(4).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(5).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(6).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(7).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(8).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(9).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(10).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(11).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(12).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(13).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(14).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(15).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(16).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(17).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(18).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(19).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(20).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(21).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(22).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(23).axd" type="text/javascript"></script>
+<script src="./Vklass-schema_files/ScriptResource(24).axd" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="64C6B5FF">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="gPIaiLC92vYOvdZEIWGfLWe+G6/KEk40s2ufdtbFYjTmydcb/XFeQgrmnuEPPTni/un5cXAXeDTriexWdw5tF/RqJ6bdresn7ZrKaua5UjXPDKeoWBbmzXnEsrQOfqcNBfObz8DmIw4rHznUfEf6gmu7RobMoR9p0upPDupXp+THBRLNgrWseT+bgWQM4SE4UsLE8seSOnnIdMFYzZkInMpntHKFFlp/GzSApcL97ZqOx3f4IO0lGiYhCjNNMZgChs/v2HqCSJ0M2vAmSNkPBdCblBNR3qTEvsfxYs6hMkr9E+OSxvoj/BrUdRkVHrrtVt6YguKLKlOmo6bKxReNhSTxmUtrl2zWA4Qn0H4lpnrGqILz1hLaI15FKdd2TdtAJk5W4VI0wmuDjAQOyTmPbBW/74ZpWD8dyhFLnOVmUxoYwdppIbHqsO8lBdgF8axsAVzOs/NAfrWXSGH+j9jGod8dYTYsnlzPTOnKBFDWfPbSqXqLUfj0u8anIEZlJLYN9hFremRMSDxyrD5+Y79MdJMc3oNrAyQYOvG0jhPUmxYiX7ysZJ7ow+ycJtAIJYyk4HLiLDagTPCVGV4vDrBBI2r1o3U0W4PCgxPwP5Z/gYTZV+2l9Fw6usNxvp7vcel7H8uwhleCE8LlQqIbFOmVhb+KfKI/Sb5utRS7twLb0bA7R69L4EElvleKbbaPfUliQPXN/rOQWrbdg5xFuhWtaU7wWXvewkDdTHu+lI8oXt/KraB53TDB3TkEbCw4ZfhFaeXd/RnOt4I/fPPDcR8pI2VxM1G38Vqy0DsM47SIbxjbgMy0hOfK/R+ZtPtJKyWLY1lufG9JYPh86zcmr9L+d3t42imAG5ZbWd6c4zokVEMZP5T6drjdXms7aXa6itfq7jOVnFPYbrfq/g7PbLiu6Z3wz5tKqo7UXU+jM9QO5vGOT/LOp8UD555c1vabONHoMEdFi8GMTjEO4E76Iwy5bXSQQ8Ryn1LP383oPrcKD2V5DzTngMdbqcJr82p5hO/knglNXdJVrj2gqhiH+thO4YFyB1/3B+eEeIQru5VQZAhFJN0Nq/yzvC3ZkA4Ba+/k8nuobf9bkIhSVGA7mWx+HZE9ybwv0wOPQAegTXzdbMQqMPVayOjvznzi/T8KVdQqc+4YgMv1QKtEAZpSsQIg/8Up1RO5QXAKa1eyM0PBgRB4Tl1EBna4zbnufSFPlkOrPBXn9m2ypeyp0V6WUjdf+IE8rVZwJAFpW+QhMbxo5ye64VabStUbtyN2VQWhmI6B1HeR7KW121i4EE2pE/rV1zCKM2LDaWLUhGsIJyhd5VlzACAZmAShMXP9gMjxttMWtgoZfL9I7FycC2elQIjuBBOARYs=">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', ['tctl00$ContentPlaceHolderOutsideRelative$UpdatePanel1',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        
+        <div id="main_container">
+            <div id="ctl00_bodyContainer" class="bodyContainer" style="background-image:url(App_Themes/Vklass/images/top-small.png); ">
+                
+	                
+
+                <div id="ctl00_ContentPlaceHolderDivContainer" class="article" style="background-image: none; width: 800px; background-color: transparent; position: relative; margin-left:80px; margin-right:37px; padding-bottom:25px;">
+                    
+    <style type="text/css">
+        .sr-content
+        {
+            position: absolute;
+            left: -999em;
+            width: 1em;
+            overflow: hidden;
+        }
+
+        @media print {
+            .sr-content, h2, select, .headline, .nav, .nav-small {display: none;}
+            * {background-image: none}
+        }   
+    </style>
+    <script src="./Vklass-schema_files/schemeFunctions.js.nedladdning" type="text/javascript"></script>
+    <script type="text/javascript">
+        function newExam(lId, sDate, courseId) {
+            ShowDialogWindow("/SchemaAddExamWindow.aspx?lId=" + lId + "&sDate=" + sDate + "&courseID=" + courseId + "&fromcalendar=true", VKresources.Add_test_assignment);
+        }
+        function ShowDialogWindow(url, title) {
+            var oWnd = $find("ctl00_ContentPlaceHolderOutsideRelative_DialogWindow");
+            oWnd.setUrl(url);
+            oWnd.set_title(title);
+            oWnd.show();
+        }
+
+        function CloseDialogWindowAndRefresh() {
+            var oWnd = $find("ctl00_ContentPlaceHolderOutsideRelative_DialogWindow");
+            oWnd.close();
+            __doPostBack('ctl00$ContentPlaceHolder2$UpdateScheme', '');
+        }
+        function CloseDialogWindow() {
+            var oWnd = $find("ctl00_ContentPlaceHolderOutsideRelative_DialogWindow");
+            oWnd.close();
+        }
+        function RefreshSchemePage(tabValue) {
+            var oWnd = $find("ctl00_ContentPlaceHolderOutsideRelative_DialogWindow");
+            oWnd.close();
+
+            var tabStrip = $find("ctl00_ContentPlaceHolder2_SchemaTabStrip");
+            var tab = tabStrip.findTabByValue(tabValue);
+            
+            if (tab) {
+                if (tab.get_selected()) {
+                    __doPostBack('ctl00$ContentPlaceHolder2$UpdateScheme', '');
+                } else {
+                    tab.click();
+                }
+            }
+        }
+    </script>
+
+    <div id="schemeContainer" class="inner">
+                <p></p>
+    <div id="ctl00_ContentPlaceHolder2_SchemaTabStrip" class="RadTabStrip RadTabStrip_Default RadTabStripTop_Default RadTabStripTop TabStrip" style="width: 100%;">
+	<!-- 2017.3.913.45 --><div class="rtsLevel rtsLevel1">
+		<ul class="rtsUL"><li class="rtsLI rtsFirst rtsLast"><a class="rtsLink rtsSelected" href="https://www.vklass.se/schema.aspx#"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Schema</span></span></span></a></li></ul>
+	</div><input id="ctl00_ContentPlaceHolder2_SchemaTabStrip_ClientState" name="ctl00_ContentPlaceHolder2_SchemaTabStrip_ClientState" type="hidden" autocomplete="off" value="{&quot;selectedIndexes&quot;:[&quot;0&quot;],&quot;logEntries&quot;:[],&quot;scrollState&quot;:{}}">
+</div>
+    <p class="headline" style="width:92%; line-height:10px">&nbsp;</p>
+
+    <div id="ctl00_ContentPlaceHolder2_SchemaMultiPage" class="RadMultiPage RadMultiPage_Default">
+	<div id="ctl00_ContentPlaceHolder2_SchemaView" class="rmpView bg-white">
+		
+            <div id="pageHeader">
+                <p></p>
+                <ul class="scheme-actions-students">
+                    
+                    
+
+                    <li id="ctl00_ContentPlaceHolder2_TimeTableLi" class="timetable"><a id="ctl00_ContentPlaceHolder2_NovaViewverHl" href="http://schema.skola24.se/vellinge/Sundsgymnasiet" target="_blank">Skola24 schemavisning</a></li>
+                    
+                    <li id="ctl00_ContentPlaceHolder2_SubscribeLi" class="subscribe"><a href="javascript: void(0)" id="SubscribeLink">Prenumerera</a></li>
+                    <li class="print"><a href="javascript:window.print();">Skriv ut</a></li>
+                </ul>
+
+            </div>
+        
+	</div><div id="ctl00_ContentPlaceHolder2_ResourceSchemaView" class="rmpView rmpHidden bg-white">
+		
+            <div id="pageHeader">
+                <p>
+                    
+                </p>    
+                <ul class="scheme-actions-students">
+                    <li class="add">
+                        <a href="javascript:reserveResourceWindow();">Boka resurs</a>
+                    </li>
+                    
+                    <li class="print"><a href="javascript:window.print();">Skriv ut</a></li>
+                </ul>                                
+            </div>
+        
+	</div><input id="ctl00_ContentPlaceHolder2_SchemaMultiPage_ClientState" name="ctl00_ContentPlaceHolder2_SchemaMultiPage_ClientState" type="hidden" autocomplete="off">
+</div>
+        <div class="sr-content">
+            
+                
+                    <h3><span>Måndag 29 november 2021</span></h3>
+                    
+                            <dl>
+                        
+                            <dt><span>09:10 - 10:25</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=109561487&amp;cid=2259118">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2259118">Gå till kurs</a></li></dd><dd><span>
+B101<br>
+Matematik 3c<br>MAT_11<br>MHJ
+</span></dd>
+
+                        
+                            <dt><span>10:40 - 11:50</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=110423303&amp;cid=2092363">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092363">Gå till kurs</a></li></dd><dd><span>
+B14:2<br>
+Digitalt skapande 1<br>DIG_11<br>NAN
+</span></dd>
+
+                        
+                            <dt><span>12:35 - 13:50</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844372&amp;cid=2092782">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092782">Gå till kurs</a></li></dd><dd><span>
+B27<br>
+Svenska 2<br>SVE_11<br>PF
+</span></dd>
+
+                        
+                            <dt><span>14:00 - 15:15</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844466&amp;cid=2092358">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092358">Gå till kurs</a></li></dd><dd><span>
+B19<br>
+Dator- och nätverksteknik<br>DAO_11<br>OK
+</span></dd>
+
+                        
+                            </dl>
+                        
+                
+                    <h3><span>Tisdag 30 november 2021</span></h3>
+                    
+                            <dl>
+                        
+                            <dt><span>08:20 - 09:40</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=111936873&amp;cid=2259118">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2259118">Gå till kurs</a></li></dd><dd><span>
+B100<br>
+Matematik 3c<br>MAT_11<br>MHJ
+</span></dd>
+
+                        
+                            <dt><a href="https://www.vklass.se/ExamInfo.aspx?id=2589882&amp;cid=2092358&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d" title="Läxa, Dator- och nätverksteknik"><span>Läxa, Dator- och ...</span></a></dt>
+<dd><span>Tid:: 09:55<br>Hårdvara Del 2 <br>...</span></dd>
+
+                        
+                            <dt><span>09:55 - 11:10</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844482&amp;cid=2092358">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092358">Gå till kurs</a></li></dd><dd><span>
+B26<br>
+Dator- och nätverksteknik<br>DAO_11<br>OK
+</span></dd>
+
+                        
+                            <dt><span>11:45 - 13:05</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=112332200&amp;cid=2092410">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092410">Gå till kurs</a></li></dd><dd><span>
+B6<br>
+Fysik 1a<br>FYS_11<br>SG
+</span></dd>
+
+                        
+                            </dl>
+                        
+                
+                    <h3><span>Onsdag 1 december 2021</span></h3>
+                    
+                            <dl>
+                        
+                            <dt><span>08:00 - 09:15</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844388&amp;cid=2092782">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092782">Gå till kurs</a></li></dd><dd><span>
+B24<br>
+Svenska 2<br>SVE_11<br>PF
+</span></dd>
+
+                        
+                            <dt><span>09:25 - 10:40</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=111936860&amp;cid=2259118">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2259118">Gå till kurs</a></li></dd><dd><span>
+B15<br>
+Matematik 3c<br>MAT_11<br>MHJ
+</span></dd>
+
+                        
+                            <dt><span>10:55 - 12:30</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=111936848&amp;cid=2092410">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092410">Gå till kurs</a></li></dd><dd><span>
+B6<br>
+Fysik 1a<br>FYS_11<br>SG
+</span></dd>
+
+                        
+                            <dt><span>13:10 - 14:25</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844561&amp;cid=2092694">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092694">Gå till kurs</a></li></dd><dd><span>
+B23<br>
+Programmering 1<br>PRR_11<br>SWN
+</span></dd>
+
+                        
+                            <dt><span>14:40 - 15:50</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108838680&amp;cid=2092363">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092363">Gå till kurs</a></li></dd><dd><span>
+BR20<br>
+Digitalt skapande 1<br>DIG_11<br>NAN
+</span></dd>
+
+                        
+                            </dl>
+                        
+                
+                    <h3><span>Torsdag 2 december 2021</span></h3>
+                    
+                            <dl>
+                        
+                            <dt><span>09:50 - 11:20</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=110421380&amp;cid=2092380">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092380">Gå till kurs</a></li></dd><dd><span>
+B29<br>
+Engelska 6<br>ENG_11<br>NHO
+</span></dd>
+
+                        
+                            <dt><span>12:05 - 13:35</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844292&amp;cid=2092410">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092410">Gå till kurs</a></li></dd><dd><span>
+B6<br>
+Fysik 1a<br>FYS_11<br>SG
+</span></dd>
+
+                        
+                            <dt><span>13:45 - 15:00</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=109561457&amp;cid=2259118">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2259118">Gå till kurs</a></li></dd><dd><span>
+B6<br>
+Matematik 3c<br>MAT_11<br>MHJ
+</span></dd>
+
+                        
+                            </dl>
+                        
+                
+                    <h3><span>Fredag 3 december 2021</span></h3>
+                    
+                            <dl>
+                        
+                            <dt><span>08:15 - 09:30</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844340&amp;cid=2092504">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092504">Gå till kurs</a></li></dd><dd><span>
+V1<br>
+Idrott och hälsa 1<br>IDR_11<br>LSE
+</span></dd>
+
+                        
+                            <dt><span>09:50 - 10:55</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844262&amp;cid=2092380">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092380">Gå till kurs</a></li></dd><dd><span>
+B7<br>
+Engelska 6<br>ENG_11<br>NHO
+</span></dd>
+
+                        
+                            <dt><span>11:00 - 11:25</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=110421397&amp;cid=2092627">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2092627">Gå till kurs</a></li></dd><dd><span>
+B7<br>
+Mentorstid<br>MT<br>EKJ,NHO
+</span></dd>
+
+                        
+                            <dt><span>12:10 - 13:25</span></dt>
+<dd><li><a href="https://www.vklass.se/CourseLecturesInfo.aspx?id=110421414&amp;cid=2252028">Visa lektionsinformation</a></li><li><a href="https://www.vklass.se/Course.aspx?id=2252028">Gå till kurs</a></li></dd><dd><span>
+B100<br>
+Programmering 1<br>PRR_11<br>OK,SWN
+</span></dd>
+
+                        
+                            </dl>
+                        
+                
+        </div>
+
+        <div id="CalendarTimeReport" style="display: none;">
+            <table id="ctl00_ContentPlaceHolder2_Calendar1" cellspacing="0" cellpadding="2" title="Calendar" border="0" style="border-width:1px;border-style:solid;border-collapse:collapse;">
+	<tbody><tr><td colspan="8" style="background-color:Silver;"><table cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+		<tbody><tr><td style="width:15%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;V7944&#39;)" style="color:Black" title="Go to the previous month">&lt;</a></td><td align="center" style="width:70%;">november 2021</td><td align="right" style="width:15%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;V8005&#39;)" style="color:Black" title="Go to the next month">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><td align="center"></td><th align="center" abbr="måndag" scope="col">mån</th><th align="center" abbr="tisdag" scope="col">tis</th><th align="center" abbr="onsdag" scope="col">ons</th><th align="center" abbr="torsdag" scope="col">tor</th><th align="center" abbr="fredag" scope="col">fre</th><th align="center" abbr="lördag" scope="col">lör</th><th align="center" abbr="söndag" scope="col">sön</th></tr><tr><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;R796807&#39;)" style="color:Black" title="Select week 1">&gt;</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7968&#39;)" style="color:Black" title="den 25 oktober">25</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7969&#39;)" style="color:Black" title="den 26 oktober">26</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7970&#39;)" style="color:Black" title="den 27 oktober">27</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7971&#39;)" style="color:Black" title="den 28 oktober">28</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7972&#39;)" style="color:Black" title="den 29 oktober">29</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7973&#39;)" style="color:Black" title="den 30 oktober">30</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7974&#39;)" style="color:Black" title="den 31 oktober">31</a></td></tr><tr><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;R797507&#39;)" style="color:Black" title="Select week 2">&gt;</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7975&#39;)" style="color:Black" title="den 1 november">1</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7976&#39;)" style="color:Black" title="den 2 november">2</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7977&#39;)" style="color:Black" title="den 3 november">3</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7978&#39;)" style="color:Black" title="den 4 november">4</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7979&#39;)" style="color:Black" title="den 5 november">5</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7980&#39;)" style="color:Black" title="den 6 november">6</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7981&#39;)" style="color:Black" title="den 7 november">7</a></td></tr><tr><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;R798207&#39;)" style="color:Black" title="Select week 3">&gt;</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7982&#39;)" style="color:Black" title="den 8 november">8</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7983&#39;)" style="color:Black" title="den 9 november">9</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7984&#39;)" style="color:Black" title="den 10 november">10</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7985&#39;)" style="color:Black" title="den 11 november">11</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7986&#39;)" style="color:Black" title="den 12 november">12</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7987&#39;)" style="color:Black" title="den 13 november">13</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7988&#39;)" style="color:Black" title="den 14 november">14</a></td></tr><tr><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;R798907&#39;)" style="color:Black" title="Select week 4">&gt;</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7989&#39;)" style="color:Black" title="den 15 november">15</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7990&#39;)" style="color:Black" title="den 16 november">16</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7991&#39;)" style="color:Black" title="den 17 november">17</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7992&#39;)" style="color:Black" title="den 18 november">18</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7993&#39;)" style="color:Black" title="den 19 november">19</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7994&#39;)" style="color:Black" title="den 20 november">20</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7995&#39;)" style="color:Black" title="den 21 november">21</a></td></tr><tr><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;R799607&#39;)" style="color:Black" title="Select week 5">&gt;</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7996&#39;)" style="color:Black" title="den 22 november">22</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7997&#39;)" style="color:Black" title="den 23 november">23</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7998&#39;)" style="color:Black" title="den 24 november">24</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;7999&#39;)" style="color:Black" title="den 25 november">25</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8000&#39;)" style="color:Black" title="den 26 november">26</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8001&#39;)" style="color:Black" title="den 27 november">27</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8002&#39;)" style="color:Black" title="den 28 november">28</a></td></tr><tr><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;R800307&#39;)" style="color:Black" title="Select week 6">&gt;</a></td><td align="center" style="color:White;background-color:LightGrey;width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8003&#39;)" style="color:White" title="den 29 november">29</a></td><td align="center" style="color:White;background-color:LightGrey;width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8004&#39;)" style="color:White" title="den 30 november">30</a></td><td align="center" style="color:White;background-color:LightGrey;width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8005&#39;)" style="color:White" title="den 1 december">1</a></td><td align="center" style="color:White;background-color:LightGrey;width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8006&#39;)" style="color:White" title="den 2 december">2</a></td><td align="center" style="color:White;background-color:LightGrey;width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8007&#39;)" style="color:White" title="den 3 december">3</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8008&#39;)" style="color:Black" title="den 4 december">4</a></td><td align="center" style="width:12%;"><a href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$Calendar1&#39;,&#39;8009&#39;)" style="color:Black" title="den 5 december">5</a></td></tr>
+</tbody></table>
+        </div>
+
+        <div id="SchemeNav">
+            <a id="ctl00_ContentPlaceHolder2_LastWeekLB" class="prev" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$LastWeekLB&#39;,&#39;&#39;)"><span>«</span> Föregående vecka</a>
+            <span id="DatePeriod" class="dateInfo" onclick="showSmallCalender();">Vecka: 48<br><span>2021-11-29 - 2021-12-03</span></span>
+            <a id="ctl00_ContentPlaceHolder2_NextWeekLB" class="next" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder2$NextWeekLB&#39;,&#39;&#39;)">Nästa vecka <span>»</span></a>
+        </div>
+
+        <table class="time-table" border="0">
+	<tbody><tr id="ctl00_ContentPlaceHolder2_tr_0">
+		<th id="ctl00_ContentPlaceHolder2_tr_0_th_0" class="day" colspan="3">Tid</th><th id="ctl00_ContentPlaceHolder2_tr_0_th_3" class="day" colspan="6">Måndag<br>29 nov</th><th id="ctl00_ContentPlaceHolder2_tr_0_th_9" class="day" colspan="6">Tisdag<br>30 nov</th><th id="ctl00_ContentPlaceHolder2_tr_0_th_15" class="day" colspan="6">Onsdag<br>1 dec</th><th id="ctl00_ContentPlaceHolder2_tr_0_th_21" class="day" colspan="6">Torsdag<br>2 dec</th><th id="ctl00_ContentPlaceHolder2_tr_0_th_27" class="day today" colspan="6">Fredag<br>3 dec</th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_1">
+		<td id="ctl00_ContentPlaceHolder2_tr_1_td_0" class="toggleEventBox" onclick="toggleEventInfo()" colspan="3">&nbsp;</td><td id="ctl00_ContentPlaceHolder2_tr_1_td_3" class="dayevents" colspan="6"></td><td id="ctl00_ContentPlaceHolder2_tr_1_td_9" class="dayevents" colspan="6"><a class="eventBox" title="Läxa, Dator- och nätverksteknik" href="https://www.vklass.se/ExamInfo.aspx?id=2589882&amp;cid=2092358&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d">Läxa, Dator- och ...<span style="display:none;" class="infotext">Tid:: 09:55<br>Hårdvara Del 2 <br>...</span></a></td><td id="ctl00_ContentPlaceHolder2_tr_1_td_15" class="dayevents" colspan="6"></td><td id="ctl00_ContentPlaceHolder2_tr_1_td_21" class="dayevents" colspan="6"></td><td id="ctl00_ContentPlaceHolder2_tr_1_td_27" class="dayevents" colspan="6"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_2">
+		<th id="ctl00_ContentPlaceHolder2_tr_2_th_0" class="time" rowspan="12">08</th><th id="ctl00_ContentPlaceHolder2_tr_2_th_1" class="time" rowspan="2">00</th><th id="ctl00_ContentPlaceHolder2_tr_2_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_2_td_3" class="emptyCell" colspan="6" rowspan="14"></td><td id="ctl00_ContentPlaceHolder2_tr_2_td_9" class="emptyCell" colspan="6" rowspan="4"></td><td id="ctl00_ContentPlaceHolder2_tr_2_td_15" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span12" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px; background-color: transparent; overflow: hidden; z-index: 1; padding: 0px; margin-top: 3px; cursor: pointer;">Onsdag 08:00 - 09:15<br><div class="innerspan" id="innerspan12"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844388&amp;cid=2092782&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092782&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Gå till kurs</a></li></ul></div><span>Svenska 2<br>SVE_11<br>PF<br>B24</span></div></td><td id="ctl00_ContentPlaceHolder2_tr_2_td_21" class="emptyCell" colspan="6" rowspan="22"></td><td id="ctl00_ContentPlaceHolder2_tr_2_td_27" class="emptyCell" colspan="6" rowspan="3"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_3">
+		<th id="ctl00_ContentPlaceHolder2_tr_3_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_4">
+		<th id="ctl00_ContentPlaceHolder2_tr_4_th_1" class="time" rowspan="2">10</th><th id="ctl00_ContentPlaceHolder2_tr_4_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_5">
+		<th id="ctl00_ContentPlaceHolder2_tr_5_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_5_td_27" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span9" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px; background-color: transparent; overflow: hidden; z-index: 1; padding: 0px; margin-top: 3px; cursor: pointer;">Fredag 08:15 - 09:30<br><div class="innerspan" id="innerspan9"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844340&amp;cid=2092504&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-03%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092504&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-03%26backPage%3d">Gå till kurs</a></li></ul></div><span>Idrott och hälsa 1<br>IDR_11<br>LSE<br>V1</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_6">
+		<th id="ctl00_ContentPlaceHolder2_tr_6_th_1" class="time" rowspan="2">20</th><th id="ctl00_ContentPlaceHolder2_tr_6_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_6_td_9" class="resv-span6" colspan="6" rowspan="16" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span14" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 124px; width: 120px;">Tisdag 08:20 - 09:40<br><div class="innerspan" id="innerspan14"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=111936873&amp;cid=2259118&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-30%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2259118&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-30%26backPage%3d">Gå till kurs</a></li></ul></div><span>Matematik 3c<br>MAT_11<br>MHJ<br>B100</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_7">
+		<th id="ctl00_ContentPlaceHolder2_tr_7_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_8">
+		<th id="ctl00_ContentPlaceHolder2_tr_8_th_1" class="time" rowspan="2">30</th><th id="ctl00_ContentPlaceHolder2_tr_8_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_9">
+		<th id="ctl00_ContentPlaceHolder2_tr_9_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_10">
+		<th id="ctl00_ContentPlaceHolder2_tr_10_th_1" class="time" rowspan="2">40</th><th id="ctl00_ContentPlaceHolder2_tr_10_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_11">
+		<th id="ctl00_ContentPlaceHolder2_tr_11_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_12">
+		<th id="ctl00_ContentPlaceHolder2_tr_12_th_1" class="time" rowspan="2">50</th><th id="ctl00_ContentPlaceHolder2_tr_12_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_13">
+		<th id="ctl00_ContentPlaceHolder2_tr_13_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_14">
+		<th id="ctl00_ContentPlaceHolder2_tr_14_th_0" class="time" rowspan="12">09</th><th id="ctl00_ContentPlaceHolder2_tr_14_th_1" class="time" rowspan="2">00</th><th id="ctl00_ContentPlaceHolder2_tr_14_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_15">
+		<th id="ctl00_ContentPlaceHolder2_tr_15_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_16">
+		<th id="ctl00_ContentPlaceHolder2_tr_16_th_1" class="time" rowspan="2">10</th><th id="ctl00_ContentPlaceHolder2_tr_16_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_16_td_3" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span13" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px; background-color: transparent; overflow: hidden; z-index: 1; padding: 0px; margin-top: 3px; cursor: pointer;">Måndag 09:10 - 10:25<br><div class="innerspan" id="innerspan13"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=109561487&amp;cid=2259118&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2259118&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d">Gå till kurs</a></li></ul></div><span>Matematik 3c<br>MAT_11<br>MHJ<br>B101</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_17">
+		<th id="ctl00_ContentPlaceHolder2_tr_17_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_17_td_15" class="emptyCell" colspan="6" rowspan="2"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_18">
+		<th id="ctl00_ContentPlaceHolder2_tr_18_th_1" class="time" rowspan="2">20</th><th id="ctl00_ContentPlaceHolder2_tr_18_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_19">
+		<th id="ctl00_ContentPlaceHolder2_tr_19_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_19_td_15" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span18" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px;">Onsdag 09:25 - 10:40<br><div class="innerspan" id="innerspan18"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=111936860&amp;cid=2259118&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2259118&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Gå till kurs</a></li></ul><span>Ej närvaroförd</span></div><span>Matematik 3c<br>MAT_11<br>MHJ<br>B15</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_20">
+		<th id="ctl00_ContentPlaceHolder2_tr_20_th_1" class="time" rowspan="2">30</th><th id="ctl00_ContentPlaceHolder2_tr_20_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_20_td_27" class="emptyCell" colspan="6" rowspan="4"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_21">
+		<th id="ctl00_ContentPlaceHolder2_tr_21_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_22">
+		<th id="ctl00_ContentPlaceHolder2_tr_22_th_1" class="time" rowspan="2">40</th><th id="ctl00_ContentPlaceHolder2_tr_22_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_22_td_9" class="emptyCell" colspan="6" rowspan="3"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_23">
+		<th id="ctl00_ContentPlaceHolder2_tr_23_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_24">
+		<th id="ctl00_ContentPlaceHolder2_tr_24_th_1" class="time" rowspan="2">50</th><th id="ctl00_ContentPlaceHolder2_tr_24_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_24_td_21" class="resv-span6" colspan="6" rowspan="18" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span5" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 140px; width: 120px; background-color: transparent; overflow: hidden; z-index: 1; padding: 0px; margin-top: 3px; cursor: pointer;">Torsdag 09:50 - 11:20<br><div class="innerspan" id="innerspan5"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=110421380&amp;cid=2092380&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-02%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092380&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-02%26backPage%3d">Gå till kurs</a></li></ul></div><span>Engelska 6<br>ENG_11<br>NHO<br>B29</span></div></td><td id="ctl00_ContentPlaceHolder2_tr_24_td_27" class="resv-span6" colspan="6" rowspan="13" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span6" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 100px; width: 120px;">Fredag 09:50 - 10:55<br><div class="innerspan" id="innerspan6"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844262&amp;cid=2092380&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-03%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092380&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-03%26backPage%3d">Gå till kurs</a></li></ul></div><span>Engelska 6<br>ENG_11<br>NHO<br>B7</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_25">
+		<th id="ctl00_ContentPlaceHolder2_tr_25_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_25_td_9" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span2" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px; background-color: transparent; overflow: hidden; z-index: 1; padding: 0px; margin-top: 3px; cursor: pointer;">Tisdag 09:55 - 11:10<br><div class="innerspan" id="innerspan2"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844482&amp;cid=2092358&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-30%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092358&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-30%26backPage%3d">Gå till kurs</a></li></ul></div><span>Dator- och nätverksteknik<br>DAO_11<br>OK<br>B26</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_26">
+		<th id="ctl00_ContentPlaceHolder2_tr_26_th_0" class="time" rowspan="12">10</th><th id="ctl00_ContentPlaceHolder2_tr_26_th_1" class="time" rowspan="2">00</th><th id="ctl00_ContentPlaceHolder2_tr_26_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_27">
+		<th id="ctl00_ContentPlaceHolder2_tr_27_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_28">
+		<th id="ctl00_ContentPlaceHolder2_tr_28_th_1" class="time" rowspan="2">10</th><th id="ctl00_ContentPlaceHolder2_tr_28_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_29">
+		<th id="ctl00_ContentPlaceHolder2_tr_29_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_30">
+		<th id="ctl00_ContentPlaceHolder2_tr_30_th_1" class="time" rowspan="2">20</th><th id="ctl00_ContentPlaceHolder2_tr_30_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_31">
+		<th id="ctl00_ContentPlaceHolder2_tr_31_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_31_td_3" class="emptyCell" colspan="6" rowspan="3"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_32">
+		<th id="ctl00_ContentPlaceHolder2_tr_32_th_1" class="time" rowspan="2">30</th><th id="ctl00_ContentPlaceHolder2_tr_32_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_33">
+		<th id="ctl00_ContentPlaceHolder2_tr_33_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_34">
+		<th id="ctl00_ContentPlaceHolder2_tr_34_th_1" class="time" rowspan="2">40</th><th id="ctl00_ContentPlaceHolder2_tr_34_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_34_td_3" class="resv-span6" colspan="6" rowspan="14" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span3" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 108px; width: 120px; background-color: transparent; overflow: hidden; z-index: 1; padding: 0px; margin-top: 3px; cursor: pointer;">Måndag 10:40 - 11:50<br><div class="innerspan" id="innerspan3"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=110423303&amp;cid=2092363&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092363&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d">Gå till kurs</a></li></ul></div><span>Digitalt skapande 1<br>DIG_11<br>NAN<br>B14:2</span></div></td><td id="ctl00_ContentPlaceHolder2_tr_34_td_15" class="emptyCell" colspan="6" rowspan="3"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_35">
+		<th id="ctl00_ContentPlaceHolder2_tr_35_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_36">
+		<th id="ctl00_ContentPlaceHolder2_tr_36_th_1" class="time" rowspan="2">50</th><th id="ctl00_ContentPlaceHolder2_tr_36_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_37">
+		<th id="ctl00_ContentPlaceHolder2_tr_37_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_37_td_15" class="resv-span6" colspan="6" rowspan="19" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span8" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 148px; width: 120px; background-color: transparent; overflow: hidden; z-index: 1; padding: 0px; margin-top: 3px; cursor: pointer;">Onsdag 10:55 - 12:30<br><div class="innerspan" id="innerspan8"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=111936848&amp;cid=2092410&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092410&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Gå till kurs</a></li></ul></div><span>Fysik 1a<br>FYS_11<br>SG<br>B6</span></div></td><td id="ctl00_ContentPlaceHolder2_tr_37_td_27" class="emptyCell" colspan="6" rowspan="1"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_38">
+		<th id="ctl00_ContentPlaceHolder2_tr_38_th_0" class="time" rowspan="12">11</th><th id="ctl00_ContentPlaceHolder2_tr_38_th_1" class="time" rowspan="2">00</th><th id="ctl00_ContentPlaceHolder2_tr_38_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_38_td_27" class="resv-span6" colspan="6" rowspan="5" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span16" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 36px; width: 120px;">Fredag 11:00 - 11:25<br><div class="innerspan" id="innerspan16"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=110421397&amp;cid=2092627&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-03%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092627&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-03%26backPage%3d">Gå till kurs</a></li></ul><span>Ej närvaroförd</span></div><span>Mentorstid<br>MT<br>EKJ,NHO<br>B7</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_39">
+		<th id="ctl00_ContentPlaceHolder2_tr_39_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_40">
+		<th id="ctl00_ContentPlaceHolder2_tr_40_th_1" class="time" rowspan="2">10</th><th id="ctl00_ContentPlaceHolder2_tr_40_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_40_td_9" class="emptyCell" colspan="6" rowspan="7"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_41">
+		<th id="ctl00_ContentPlaceHolder2_tr_41_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_42">
+		<th id="ctl00_ContentPlaceHolder2_tr_42_th_1" class="time" rowspan="2">20</th><th id="ctl00_ContentPlaceHolder2_tr_42_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_42_td_21" class="emptyCell" colspan="6" rowspan="9"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_43">
+		<th id="ctl00_ContentPlaceHolder2_tr_43_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_43_td_27" class="emptyCell" colspan="6" rowspan="9"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_44">
+		<th id="ctl00_ContentPlaceHolder2_tr_44_th_1" class="time" rowspan="2">30</th><th id="ctl00_ContentPlaceHolder2_tr_44_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_45">
+		<th id="ctl00_ContentPlaceHolder2_tr_45_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_46">
+		<th id="ctl00_ContentPlaceHolder2_tr_46_th_1" class="time" rowspan="2">40</th><th id="ctl00_ContentPlaceHolder2_tr_46_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_47">
+		<th id="ctl00_ContentPlaceHolder2_tr_47_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_47_td_9" class="resv-span6" colspan="6" rowspan="16" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span7" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 124px; width: 120px; background-color: transparent; overflow: hidden; z-index: 1; padding: 0px; margin-top: 3px; cursor: pointer;">Tisdag 11:45 - 13:05<br><div class="innerspan" id="innerspan7"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=112332200&amp;cid=2092410&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-30%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092410&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-30%26backPage%3d">Gå till kurs</a></li></ul></div><span>Fysik 1a<br>FYS_11<br>SG<br>B6</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_48">
+		<th id="ctl00_ContentPlaceHolder2_tr_48_th_1" class="time" rowspan="2">50</th><th id="ctl00_ContentPlaceHolder2_tr_48_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_48_td_3" class="emptyCell" colspan="6" rowspan="9"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_49">
+		<th id="ctl00_ContentPlaceHolder2_tr_49_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_50">
+		<th id="ctl00_ContentPlaceHolder2_tr_50_th_0" class="time" rowspan="12">12</th><th id="ctl00_ContentPlaceHolder2_tr_50_th_1" class="time" rowspan="2">00</th><th id="ctl00_ContentPlaceHolder2_tr_50_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_51">
+		<th id="ctl00_ContentPlaceHolder2_tr_51_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_51_td_21" class="resv-span6" colspan="6" rowspan="18" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span15" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 140px; width: 120px;">Torsdag 12:05 - 13:35<br><div class="innerspan" id="innerspan15"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844292&amp;cid=2092410&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-02%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092410&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-02%26backPage%3d">Gå till kurs</a></li></ul><span>Ej närvaroförd</span></div><span>Fysik 1a<br>FYS_11<br>SG<br>B6</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_52">
+		<th id="ctl00_ContentPlaceHolder2_tr_52_th_1" class="time" rowspan="2">10</th><th id="ctl00_ContentPlaceHolder2_tr_52_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_52_td_27" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span17" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px;">Fredag 12:10 - 13:25<br><div class="innerspan" id="innerspan17"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=110421414&amp;cid=2252028&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-03%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2252028&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-03%26backPage%3d">Gå till kurs</a></li></ul><span>Ej närvaroförd</span></div><span>Programmering 1<br>PRR_11<br>OK,SWN<br>B100</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_53">
+		<th id="ctl00_ContentPlaceHolder2_tr_53_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_54">
+		<th id="ctl00_ContentPlaceHolder2_tr_54_th_1" class="time" rowspan="2">20</th><th id="ctl00_ContentPlaceHolder2_tr_54_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_55">
+		<th id="ctl00_ContentPlaceHolder2_tr_55_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_56">
+		<th id="ctl00_ContentPlaceHolder2_tr_56_th_1" class="time" rowspan="2">30</th><th id="ctl00_ContentPlaceHolder2_tr_56_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_56_td_15" class="emptyCell" colspan="6" rowspan="8"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_57">
+		<th id="ctl00_ContentPlaceHolder2_tr_57_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_57_td_3" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span11" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px; background-color: transparent; overflow: hidden; z-index: 1; padding: 0px; margin-top: 3px; cursor: pointer;">Måndag 12:35 - 13:50<br><div class="innerspan" id="innerspan11"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844372&amp;cid=2092782&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092782&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d">Gå till kurs</a></li></ul></div><span>Svenska 2<br>SVE_11<br>PF<br>B27</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_58">
+		<th id="ctl00_ContentPlaceHolder2_tr_58_th_1" class="time" rowspan="2">40</th><th id="ctl00_ContentPlaceHolder2_tr_58_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_59">
+		<th id="ctl00_ContentPlaceHolder2_tr_59_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_60">
+		<th id="ctl00_ContentPlaceHolder2_tr_60_th_1" class="time" rowspan="2">50</th><th id="ctl00_ContentPlaceHolder2_tr_60_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_61">
+		<th id="ctl00_ContentPlaceHolder2_tr_61_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_62">
+		<th id="ctl00_ContentPlaceHolder2_tr_62_th_0" class="time" rowspan="12">13</th><th id="ctl00_ContentPlaceHolder2_tr_62_th_1" class="time" rowspan="2">00</th><th id="ctl00_ContentPlaceHolder2_tr_62_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_63">
+		<th id="ctl00_ContentPlaceHolder2_tr_63_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_63_td_9" class="emptyCell" colspan="6" rowspan="47"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_64">
+		<th id="ctl00_ContentPlaceHolder2_tr_64_th_1" class="time" rowspan="2">10</th><th id="ctl00_ContentPlaceHolder2_tr_64_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_64_td_15" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span10" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px;">Onsdag 13:10 - 14:25<br><div class="innerspan" id="innerspan10"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844561&amp;cid=2092694&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092694&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Gå till kurs</a></li></ul></div><span>Programmering 1<br>PRR_11<br>SWN<br>B23</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_65">
+		<th id="ctl00_ContentPlaceHolder2_tr_65_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_66">
+		<th id="ctl00_ContentPlaceHolder2_tr_66_th_1" class="time" rowspan="2">20</th><th id="ctl00_ContentPlaceHolder2_tr_66_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_67">
+		<th id="ctl00_ContentPlaceHolder2_tr_67_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_67_td_27" class="emptyCell" colspan="6" rowspan="43"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_68">
+		<th id="ctl00_ContentPlaceHolder2_tr_68_th_1" class="time" rowspan="2">30</th><th id="ctl00_ContentPlaceHolder2_tr_68_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_69">
+		<th id="ctl00_ContentPlaceHolder2_tr_69_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_69_td_21" class="emptyCell" colspan="6" rowspan="2"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_70">
+		<th id="ctl00_ContentPlaceHolder2_tr_70_th_1" class="time" rowspan="2">40</th><th id="ctl00_ContentPlaceHolder2_tr_70_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_71">
+		<th id="ctl00_ContentPlaceHolder2_tr_71_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_71_td_21" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span19" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px;">Torsdag 13:45 - 15:00<br><div class="innerspan" id="innerspan19"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=109561457&amp;cid=2259118&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-02%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2259118&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-02%26backPage%3d">Gå till kurs</a></li></ul><span>Ej närvaroförd</span></div><span>Matematik 3c<br>MAT_11<br>MHJ<br>B6</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_72">
+		<th id="ctl00_ContentPlaceHolder2_tr_72_th_1" class="time" rowspan="2">50</th><th id="ctl00_ContentPlaceHolder2_tr_72_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_72_td_3" class="emptyCell" colspan="6" rowspan="2"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_73">
+		<th id="ctl00_ContentPlaceHolder2_tr_73_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_74">
+		<th id="ctl00_ContentPlaceHolder2_tr_74_th_0" class="time" rowspan="12">14</th><th id="ctl00_ContentPlaceHolder2_tr_74_th_1" class="time" rowspan="2">00</th><th id="ctl00_ContentPlaceHolder2_tr_74_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_74_td_3" class="resv-span6" colspan="6" rowspan="15" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span1" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 116px; width: 120px;">Måndag 14:00 - 15:15<br><div class="innerspan" id="innerspan1"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108844466&amp;cid=2092358&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092358&amp;backPage=%2fSchema.aspx%3fd%3d2021-11-29%26backPage%3d">Gå till kurs</a></li></ul></div><span>Dator- och nätverksteknik<br>DAO_11<br>OK<br>B19</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_75">
+		<th id="ctl00_ContentPlaceHolder2_tr_75_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_76">
+		<th id="ctl00_ContentPlaceHolder2_tr_76_th_1" class="time" rowspan="2">10</th><th id="ctl00_ContentPlaceHolder2_tr_76_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_77">
+		<th id="ctl00_ContentPlaceHolder2_tr_77_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_78">
+		<th id="ctl00_ContentPlaceHolder2_tr_78_th_1" class="time" rowspan="2">20</th><th id="ctl00_ContentPlaceHolder2_tr_78_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_79">
+		<th id="ctl00_ContentPlaceHolder2_tr_79_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_79_td_15" class="emptyCell" colspan="6" rowspan="3"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_80">
+		<th id="ctl00_ContentPlaceHolder2_tr_80_th_1" class="time" rowspan="2">30</th><th id="ctl00_ContentPlaceHolder2_tr_80_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_81">
+		<th id="ctl00_ContentPlaceHolder2_tr_81_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_82">
+		<th id="ctl00_ContentPlaceHolder2_tr_82_th_1" class="time" rowspan="2">40</th><th id="ctl00_ContentPlaceHolder2_tr_82_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_82_td_15" class="resv-span6" colspan="6" rowspan="14" style="background-color:#E9E9E9;"><div class="LessonInfoContainer" id="span4" oncontextmenu="return false" onmouseover="toggleLesson(this.id, true, this.style.height, this.style.width)" onmouseout="toggleLesson(this.id, false, this.style.height, this.style.width)" style="height: 108px; width: 120px;">Onsdag 14:40 - 15:50<br><div class="innerspan" id="innerspan4"><ul><li><a class="lectureinfo" href="https://www.vklass.se/CourseLecturesInfo.aspx?id=108838680&amp;cid=2092363&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Visa lektionsinformation</a></li><li><a class="course" href="https://www.vklass.se/Course.aspx?id=2092363&amp;backPage=%2fSchema.aspx%3fd%3d2021-12-01%26backPage%3d">Gå till kurs</a></li></ul></div><span>Digitalt skapande 1<br>DIG_11<br>NAN<br>BR20</span></div></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_83">
+		<th id="ctl00_ContentPlaceHolder2_tr_83_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_84">
+		<th id="ctl00_ContentPlaceHolder2_tr_84_th_1" class="time" rowspan="2">50</th><th id="ctl00_ContentPlaceHolder2_tr_84_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_85">
+		<th id="ctl00_ContentPlaceHolder2_tr_85_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_86">
+		<th id="ctl00_ContentPlaceHolder2_tr_86_th_0" class="time" rowspan="12">15</th><th id="ctl00_ContentPlaceHolder2_tr_86_th_1" class="time" rowspan="2">00</th><th id="ctl00_ContentPlaceHolder2_tr_86_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_86_td_21" class="emptyCell" colspan="6" rowspan="24"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_87">
+		<th id="ctl00_ContentPlaceHolder2_tr_87_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_88">
+		<th id="ctl00_ContentPlaceHolder2_tr_88_th_1" class="time" rowspan="2">10</th><th id="ctl00_ContentPlaceHolder2_tr_88_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_89">
+		<th id="ctl00_ContentPlaceHolder2_tr_89_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_89_td_3" class="emptyCell" colspan="6" rowspan="21"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_90">
+		<th id="ctl00_ContentPlaceHolder2_tr_90_th_1" class="time" rowspan="2">20</th><th id="ctl00_ContentPlaceHolder2_tr_90_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_91">
+		<th id="ctl00_ContentPlaceHolder2_tr_91_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_92">
+		<th id="ctl00_ContentPlaceHolder2_tr_92_th_1" class="time" rowspan="2">30</th><th id="ctl00_ContentPlaceHolder2_tr_92_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_93">
+		<th id="ctl00_ContentPlaceHolder2_tr_93_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_94">
+		<th id="ctl00_ContentPlaceHolder2_tr_94_th_1" class="time" rowspan="2">40</th><th id="ctl00_ContentPlaceHolder2_tr_94_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_95">
+		<th id="ctl00_ContentPlaceHolder2_tr_95_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_96">
+		<th id="ctl00_ContentPlaceHolder2_tr_96_th_1" class="time" rowspan="2">50</th><th id="ctl00_ContentPlaceHolder2_tr_96_th_2"></th><td id="ctl00_ContentPlaceHolder2_tr_96_td_15" class="emptyCell" colspan="6" rowspan="14"></td>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_97">
+		<th id="ctl00_ContentPlaceHolder2_tr_97_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_98">
+		<th id="ctl00_ContentPlaceHolder2_tr_98_th_0" class="time" rowspan="12">16</th><th id="ctl00_ContentPlaceHolder2_tr_98_th_1" class="time" rowspan="2">00</th><th id="ctl00_ContentPlaceHolder2_tr_98_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_99">
+		<th id="ctl00_ContentPlaceHolder2_tr_99_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_100">
+		<th id="ctl00_ContentPlaceHolder2_tr_100_th_1" class="time" rowspan="2">10</th><th id="ctl00_ContentPlaceHolder2_tr_100_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_101">
+		<th id="ctl00_ContentPlaceHolder2_tr_101_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_102">
+		<th id="ctl00_ContentPlaceHolder2_tr_102_th_1" class="time" rowspan="2">20</th><th id="ctl00_ContentPlaceHolder2_tr_102_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_103">
+		<th id="ctl00_ContentPlaceHolder2_tr_103_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_104">
+		<th id="ctl00_ContentPlaceHolder2_tr_104_th_1" class="time" rowspan="2">30</th><th id="ctl00_ContentPlaceHolder2_tr_104_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_105">
+		<th id="ctl00_ContentPlaceHolder2_tr_105_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_106">
+		<th id="ctl00_ContentPlaceHolder2_tr_106_th_1" class="time" rowspan="2">40</th><th id="ctl00_ContentPlaceHolder2_tr_106_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_107">
+		<th id="ctl00_ContentPlaceHolder2_tr_107_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_108">
+		<th id="ctl00_ContentPlaceHolder2_tr_108_th_1" class="time" rowspan="2">50</th><th id="ctl00_ContentPlaceHolder2_tr_108_th_2"></th>
+	</tr><tr id="ctl00_ContentPlaceHolder2_tr_109">
+		<th id="ctl00_ContentPlaceHolder2_tr_109_th_2"></th>
+	</tr>
+</tbody></table>
+        
+
+        <input type="hidden" name="ctl00$ContentPlaceHolder2$StartDateWeek" id="ctl00_ContentPlaceHolder2_StartDateWeek" value="2021-11-29 00:00:00">
+        <input type="hidden" name="ctl00$ContentPlaceHolder2$EndDateWeek" id="ctl00_ContentPlaceHolder2_EndDateWeek" value="2021-12-04 00:00:00">
+        <input type="hidden" name="ctl00$ContentPlaceHolder2$ScheduleView" id="ctl00_ContentPlaceHolder2_ScheduleView" value="1">
+        <input type="hidden" name="ctl00$ContentPlaceHolder2$SchoolID" id="ctl00_ContentPlaceHolder2_SchoolID" value="180">
+        <input type="hidden" name="ctl00$ContentPlaceHolder2$OnlyOneSchool" id="ctl00_ContentPlaceHolder2_OnlyOneSchool" value="True">
+
+        <input type="submit" name="ctl00$ContentPlaceHolder2$UpdateScheme" value="Button" id="UpdateScheme" style="display: none;">
+    </div>
+
+    
+
+    <div id="ctl00_ContentPlaceHolder2_RadWindowManager1" style="z-index:999999;display:none;">
+	<div id="ctl00_ContentPlaceHolder2_AddLessonWindow" style="display:none;">
+		<div id="ctl00_ContentPlaceHolder2_AddLessonWindow_C" style="display:none;">
+
+		</div><input id="ctl00_ContentPlaceHolder2_AddLessonWindow_ClientState" name="ctl00_ContentPlaceHolder2_AddLessonWindow_ClientState" type="hidden" autocomplete="off">
+	</div><div id="ctl00_ContentPlaceHolder2_ExcludeSchoolsWindow" style="display:none;">
+		<div id="ctl00_ContentPlaceHolder2_ExcludeSchoolsWindow_C" style="display:none;">
+
+		</div><input id="ctl00_ContentPlaceHolder2_ExcludeSchoolsWindow_ClientState" name="ctl00_ContentPlaceHolder2_ExcludeSchoolsWindow_ClientState" type="hidden" autocomplete="off">
+	</div><div id="ctl00_ContentPlaceHolder2_SubscribeWindow" style="display:none;">
+		<div id="ctl00_ContentPlaceHolder2_SubscribeWindow_C" style="display:none;">
+
+		</div><input id="ctl00_ContentPlaceHolder2_SubscribeWindow_ClientState" name="ctl00_ContentPlaceHolder2_SubscribeWindow_ClientState" type="hidden" autocomplete="off">
+	</div><div id="ctl00_ContentPlaceHolder2_ReserveResourceWindow" style="display:none;">
+		<div id="ctl00_ContentPlaceHolder2_ReserveResourceWindow_C" style="display:none;">
+
+		</div><input id="ctl00_ContentPlaceHolder2_ReserveResourceWindow_ClientState" name="ctl00_ContentPlaceHolder2_ReserveResourceWindow_ClientState" type="hidden" autocomplete="off">
+	</div><div id="ctl00_ContentPlaceHolder2_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a onclick="$find(&#39;{0}&#39;).close(true);" class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_ContentPlaceHolder2_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter(&#39;{0}&#39;, event, this);" type="text" class="rwDialogInput" value="{2}">
+			    </div>
+			    <div>
+				    <a onclick="$find(&#39;{0}&#39;).close(this.parentNode.parentNode.getElementsByTagName(&#39;input&#39;)[0].value);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find(&#39;{0}&#39;).close(null);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_ContentPlaceHolder2_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find(&#39;{0}&#39;).close(true);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find(&#39;{0}&#39;).close(false);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_ContentPlaceHolder2_RadWindowManager1_ClientState" name="ctl00_ContentPlaceHolder2_RadWindowManager1_ClientState" type="hidden">
+</div>
+
+
+                </div>
+                <div class="nav-small" runat="server"><h2>Navigering</h2><p><a href="javascript:void(0)" onclick="$(&#39;#ctl00_navbar&#39;).toggle(&#39;slow&#39;);$(this).toggle(&#39;slow&#39;);$(&#39;#hidemainmenubutton&#39;).show(&#39;slow&#39;)" id="showmainmenubutton" title="Klicka för att förstora menyn"><img src="./Vklass-schema_files/btn-slideout.png" alt="Klicka för att förstora menyn"></a></p></div>
+                <div id="ctl00_navbar" class="nav" style="display: none;">
+                    <h2>Navigering</h2>
+                    <div id="ctl00_scoreboard" class="scoreboard"><ul class="topmenu"><li class="topmenu-myhome"><a href="https://www.vklass.se/User.aspx">Mitt Hem</a></li><li class="topmenu-messages"><a href="https://www.vklass.se/Messaging/Messages.aspx">Meddelanden</a></li><li class="topmenu-relations"><a href="https://www.vklass.se/Friends.aspx">Relation</a></li><li class="topmenu-feed"><a href="https://www.vklass.se/Latest.aspx">Händelser</a></li><li class="topmenu-logout"><a href="https://www.vklass.se/login.aspx?cookiecheck=true&amp;logout=all">Logga ut</a></li><li class="topmenu-settings"><a href="https://www.vklass.se/MySettings.aspx">Mitt konto</a></li></ul></div>
+                    <p id="ctl00_logobar" class="logo">
+                        <a href="https://www.vklass.se/default.aspx" title="Gå till Vklass startsida">
+                            <img id="ctl00_PageLogo" title="Vklass" src="./Vklass-schema_files/org_708355F2-915F-47D9-997E-C659F2AF448A.png" style="border-width:0px;"></a>
+                    </p>
+                    <div id="ctl00_searchPanel" class="search" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_SearchButton&#39;)">
+	
+                        <div id="ctl00_SearchTB" class="RadComboBox RadComboBox_Default combotextbox" style="border-width:0px;border-style:None;width:160px;white-space:normal;">
+		<table summary="combobox" border="0" style="border-width:0;border-collapse:collapse;width:100%">
+			<tbody><tr>
+				<td class="rcbInputCell rcbInputCellLeft" style="width:100%;"><input name="ctl00$SearchTB" type="text" class="rcbInput radPreventDecorate" id="ctl00_SearchTB_Input" value="Sök..." style="color:Black;background-color:Transparent;" autocomplete="off"></td><td class="rcbArrowCell rcbArrowCellRight rcbArrowCellHidden"><a id="ctl00_SearchTB_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+			</tr>
+		</tbody></table><div class="rcbSlide" style="z-index: 19998; display: none; width: 360px;"><div id="ctl00_SearchTB_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Default " style="width: 360px;"><div class="rcbScroll rcbWidth"></div></div></div><input id="ctl00_SearchTB_ClientState" name="ctl00_SearchTB_ClientState" type="hidden" autocomplete="off">
+	</div>
+
+                        <p>
+                            <input type="submit" name="ctl00$SearchButton" value="Ok" id="ctl00_SearchButton" class="searchButton">
+                        </p>
+                    
+</div>
+
+                    
+        <ul class="leftmenu">
+    
+        <li class="books">
+            <a target="_blank" href="https://lcutbildning.vellinge.se/HCW.Welfare.Common.DesktopWeb?Actor=Actor_Professional&amp;Idpmethod=saml&amp;domain=Vellinge" title="Betyg &amp; NP">
+                Betyg &amp; NP
+            </a>
+        </li>
+    
+        <li class="kalender">
+            <a href="https://www.vklass.se/schema.aspx" title="Schema">
+                Schema
+            </a>
+        </li>
+    
+        <li class="minakurser">
+            <a href="https://www.vklass.se/courselist.aspx" title="Mina kurser">
+                Mina kurser
+            </a>
+        </li>
+    
+        <li class="klass">
+            <a href="https://www.vklass.se/classlist.aspx" title="Min klass">
+                Min klass
+            </a>
+        </li>
+    
+        <li class="minafiler">
+            <a href="https://www.vklass.se/MyFiles.aspx" title="Mina filer">
+                Mina filer
+            </a>
+        </li>
+    
+        <li class="skola">
+            <a href="https://www.vklass.se/MySchool.aspx" title="Min skola">
+                Min skola
+            </a>
+        </li>
+    
+        <li class="tools">
+            <a href="https://www.vklass.se/StudieTools/" title="Verktyg">
+                Verktyg
+            </a>
+        </li>
+    
+        <li class="Teams">
+            <a href="https://www.vklass.se/Teams/default.aspx" title="Team">
+                Team
+            </a>
+        </li>
+    
+        <li class="help">
+            <a href="https://www.vklass.se/support/default.aspx" title="Hjälp/support">
+                Hjälp/support
+            </a>
+        </li>
+    
+        <li class="Paper">
+            <a target="_blank" href="https://vellinge.se/sundsgymnasiet/for-dig-som-studerar/" title="Ansökan byte">
+                Ansökan byte
+            </a>
+        </li>
+    
+        <li class="books">
+            <a target="_blank" href="https://exam.net/" title="Exam.net prov">
+                Exam.net prov
+            </a>
+        </li>
+    
+        <li class="functions">
+            <a target="_blank" href="mailto://servicedesk@vellinge.se" title="Fel på datorn">
+                Fel på datorn
+            </a>
+        </li>
+    
+        <li class="minafiler">
+            <a target="_blank" href="https://auth.inlasningstjanst.se/sso-integration/office365id/sso/init?client_id=39f481535ca9b084a665&amp;redirect_uri=https://www.inlasningstjanst.se/akademi/&amp;response_type=code&amp;scope=openid+email+profile&amp;acr_values=http://inlasningstjanst.se/assurance/basic+http://inlasningstjanst.se/assurance/secure&amp;ui_locales=" title="ILT">
+                ILT
+            </a>
+        </li>
+    
+        <li class="functions">
+            <a target="_blank" href="https://vellinge.inspera.com/" title="Inspera prov">
+                Inspera prov
+            </a>
+        </li>
+    
+        <li class="liveatedu">
+            <a target="_blank" href="https://adfs.vellinge.se/adfs/ls/?&amp;wa=wsignin1.0&amp;wtrealm=urn:federation:MicrosoftOnline" title="OneDrive">
+                OneDrive
+            </a>
+        </li>
+    
+        </ul>
+    
+                    <p class="hide-menu-button"><a href="javascript:void(0)" id="hidemainmenubutton" onclick="$(&#39;#ctl00_navbar&#39;).toggle(&#39;slow&#39;);$(this).toggle(&#39;slow&#39;);$(&#39;#showmainmenubutton&#39;).show(&#39;slow&#39;);document.getElementById(&#39;ctl00_logobar&#39;).display=&#39;block&#39;;" title="Klicka för att minimera menyn"><img src="./Vklass-schema_files/btn-slidein.png" alt="Klicka för att minimera menyn"></a></p>
+                </div>
+                
+
+            </div>
+
+                <div id="toggleBarFlaerp" style="right: -20px;">
+                    <div id="toggleBarFlaerpClick" onclick="toggleToolsDrawer()"></div>
+                </div>
+                <div id="toggleBar" onclick="toggleToolsDrawer()" style="right: -220px;"><div style="display: table-cell; vertical-align: middle;"><img src="./Vklass-schema_files/lines.png"></div></div>
+               
+                <div id="myToolsBox" style="display: none;">
+                    <p>
+                    </p>
+                    <p>
+                        <b>Verktyg</b> 
+                    </p>
+                    <ul>
+                        
+                        <li class="exam"><a href="https://www.vklass.se/StudieTools/ApplicationsList.aspx?backPage=/default.aspx">Applikationer du har tillgång till</a></li>
+                        
+                        <li id="ctl00_NeLi" class="ne"><a id="ctl00_NeUrl" onmouseover="this.target=&#39;_blank&#39;;" href="https://www.ne.se/portalanslutning/direkt/sundsgy">Nationalencyklopedin</a></li>
+                        
+                        <li class="exam" style="margin-top: 10px;"><a href="https://www.vklass.se/Assignments/HandInAssignment.aspx">Lämna in en uppgift</a></li>
+                        <li class="utbm"><a href="https://www.vklass.se/Assignments/Assignments.aspx">Mina inlämnade uppgifter</a></li>
+
+                        
+                    </ul> 
+                    <p style="margin-top: 20px;">
+                        <b>Snabblänkar</b>
+                        <span style="float:right">
+                        <input type="image" name="ctl00$UpdateQuickLinks" id="UpdateQuickLinks" class="RefreshButton" src="./Vklass-schema_files/update.png" style="width:20px;border-width:0px;visibility: hidden;">
+                        <a id="EditQuickLinks" style="cursor:pointer">Redigera</a>
+                        
+                        </span>
+                    </p>
+                    <div id="QuickLinksWrapper">
+                    
+                                <ul>
+                        
+                                <li class="quickLink"><a id="ctl00_QuickLinksRepeater_ctl01_HLQuickLink" href="http://www.landguiden.se/pubLogin.asp?nexturl=default.asp&amp;action=AUTH&amp;username=vellinge&amp;password=land23" target="_self">Landguiden</a></li>
+                            
+                                <li class="quickLink"><a id="ctl00_QuickLinksRepeater_ctl02_HLQuickLink" href="http://www.skolverket.se/bedomning/nationella-prov-bedomningsstod/gymnasial-utbildning/kursprov/provdatum" target="_self">Nationella prov 13/14</a></li>
+                            
+                                <li class="quickLink"><a id="ctl00_QuickLinksRepeater_ctl03_HLQuickLink" href="http://bibliotek.vellinge.se/" target="_self">Biblioteksportalen</a></li>
+                            
+                                <li class="quickLink"><a id="ctl00_QuickLinksRepeater_ctl04_HLQuickLink" href="https://www.ne.se/portalanslutning/direkt/sundsgy" target="_self">NE</a></li>
+                            
+                                <li class="quickLink"><a id="ctl00_QuickLinksRepeater_ctl05_HLQuickLink" href="http://insidan/organizations/Sundsgymnasiet/default.aspx" target="_self">Sunds org insidan</a></li>
+                            
+                                <li class="quickLink"><a id="ctl00_QuickLinksRepeater_ctl06_HLQuickLink" href="https://vellinge.se/sundsgymnasiet/" target="_self">Sundsgymnasiet</a></li>
+                            
+                            </ul>
+                        
+                    
+                    </div>
+                    <div id="EditQuickLinksWrapper" style="display:none">
+                        <div id="AddQuickLinkWrapper" style="margin:5px">
+                            <label>Namn:</label><br>
+                            <input type="text" id="newQuickLinkName"><br>
+                            <label>Url:</label><br>
+                            <input type="text" id="newQuickLinkUrl"> <small><a href="javascript:addCurrentPage(&#39;newQuickLinkUrl&#39;)">Aktuell sida</a></small><br>
+                            <input type="button" id="SaveNewQuickLink" value="Spara">
+                        </div><br>
+                    
+                                <ul>
+                        
+                                <li class="quickLink" data-hide="False" data-id="275" data-userid="04ge02">
+                                    <a id="ctl00_EditQuickLinksRepeater_ctl01_HLQuickLink" href="http://www.landguiden.se/pubLogin.asp?nexturl=default.asp&amp;action=AUTH&amp;username=vellinge&amp;password=land23" target="_self">Landguiden</a>
+                                    
+                                    <div style="float:right; margin-right:5px">
+                                    
+                                    <a class="QuickLinkUp" style="cursor:pointer"></a>
+                                    <a class="QuickLinkDown" style="cursor:pointer"></a>
+                                    <a id="hide_275" style="cursor:pointer" title="Döljlänk">Dölj</a>
+                                    </div>
+                                </li>
+                            
+                                <li class="quickLink" data-hide="False" data-id="353" data-userid="04ge02">
+                                    <a id="ctl00_EditQuickLinksRepeater_ctl02_HLQuickLink" href="http://www.skolverket.se/bedomning/nationella-prov-bedomningsstod/gymnasial-utbildning/kursprov/provdatum" target="_self">Nationella prov 13/14</a>
+                                    
+                                    <div style="float:right; margin-right:5px">
+                                    
+                                    <a class="QuickLinkUp" style="cursor:pointer"></a>
+                                    <a class="QuickLinkDown" style="cursor:pointer"></a>
+                                    <a id="hide_353" style="cursor:pointer" title="Döljlänk">Dölj</a>
+                                    </div>
+                                </li>
+                            
+                                <li class="quickLink" data-hide="False" data-id="2896" data-userid="04ge02">
+                                    <a id="ctl00_EditQuickLinksRepeater_ctl03_HLQuickLink" href="http://bibliotek.vellinge.se/" target="_self">Biblioteksportalen</a>
+                                    
+                                    <div style="float:right; margin-right:5px">
+                                    
+                                    <a class="QuickLinkUp" style="cursor:pointer"></a>
+                                    <a class="QuickLinkDown" style="cursor:pointer"></a>
+                                    <a id="hide_2896" style="cursor:pointer" title="Döljlänk">Dölj</a>
+                                    </div>
+                                </li>
+                            
+                                <li class="quickLink" data-hide="False" data-id="10544" data-userid="04ge02">
+                                    <a id="ctl00_EditQuickLinksRepeater_ctl04_HLQuickLink" href="https://www.ne.se/portalanslutning/direkt/sundsgy" target="_self">NE</a>
+                                    
+                                    <div style="float:right; margin-right:5px">
+                                    
+                                    <a class="QuickLinkUp" style="cursor:pointer"></a>
+                                    <a class="QuickLinkDown" style="cursor:pointer"></a>
+                                    <a id="hide_10544" style="cursor:pointer" title="Döljlänk">Dölj</a>
+                                    </div>
+                                </li>
+                            
+                                <li class="quickLink" data-hide="False" data-id="25129" data-userid="04ge02">
+                                    <a id="ctl00_EditQuickLinksRepeater_ctl05_HLQuickLink" href="http://insidan/organizations/Sundsgymnasiet/default.aspx" target="_self">Sunds org insidan</a>
+                                    
+                                    <div style="float:right; margin-right:5px">
+                                    
+                                    <a class="QuickLinkUp" style="cursor:pointer"></a>
+                                    <a class="QuickLinkDown" style="cursor:pointer"></a>
+                                    <a id="hide_25129" style="cursor:pointer" title="Döljlänk">Dölj</a>
+                                    </div>
+                                </li>
+                            
+                                <li class="quickLink" data-hide="False" data-id="34162" data-userid="04ge02">
+                                    <a id="ctl00_EditQuickLinksRepeater_ctl06_HLQuickLink" href="https://vellinge.se/sundsgymnasiet/" target="_self">Sundsgymnasiet</a>
+                                    
+                                    <div style="float:right; margin-right:5px">
+                                    
+                                    <a class="QuickLinkUp" style="cursor:pointer"></a>
+                                    <a class="QuickLinkDown" style="cursor:pointer"></a>
+                                    <a id="hide_34162" style="cursor:pointer" title="Döljlänk">Dölj</a>
+                                    </div>
+                                </li>
+                            
+                                <li>
+                                    <button id="SaveEditQuickLink">Spara</button>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                   
+                    <div id="editQuickLinkMessage" style="padding:5px;font-style:italic"></div>
+                </div>
+              
+                <div id="mytools" class="mytools" onclick="toggleMyTools()" style="display: none;">
+                    Verktyg
+                </div>
+                
+                <div style="position: absolute; top: 20px; right: 10px; width: 200px; z-index: 9999; display: none;" id="toolsInfoBox">
+                    <div style="background-color: #fff; border-radius: 5px; width: 150px;padding: 10px;float: left; border: 1px solid black;">
+                      <a onclick="document.getElementById(&#39;toolsInfoBox&#39;).style.display=&#39;none&#39;;toggleToolsDrawer();">Öppna verktygslådan </a>.
+                    </div>
+                    <img src="./Vklass-schema_files/pil-h2.png" style="margin-top: 25px; margin-left: -1px;">
+                </div>
+
+            
+    <div id="ctl00_ContentPlaceHolderOutsideRelative_UpdatePanel1">
+	
+        <div id="ctl00_ContentPlaceHolderOutsideRelative_RadWindowManager2" style="z-index:99999999;display:none;">
+		<div id="ctl00_ContentPlaceHolderOutsideRelative_DialogWindow" style="display:none;">
+			<div id="ctl00_ContentPlaceHolderOutsideRelative_DialogWindow_C" style="display:none;">
+
+			</div><input id="ctl00_ContentPlaceHolderOutsideRelative_DialogWindow_ClientState" name="ctl00_ContentPlaceHolderOutsideRelative_DialogWindow_ClientState" type="hidden" autocomplete="off">
+		</div><div id="ctl00_ContentPlaceHolderOutsideRelative_RadWindowManager2_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a onclick="$find(&#39;{0}&#39;).close(true);" class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_ContentPlaceHolderOutsideRelative_RadWindowManager2_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter(&#39;{0}&#39;, event, this);" type="text" class="rwDialogInput" value="{2}">
+			    </div>
+			    <div>
+				    <a onclick="$find(&#39;{0}&#39;).close(this.parentNode.parentNode.getElementsByTagName(&#39;input&#39;)[0].value);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find(&#39;{0}&#39;).close(null);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_ContentPlaceHolderOutsideRelative_RadWindowManager2_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find(&#39;{0}&#39;).close(true);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find(&#39;{0}&#39;).close(false);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_ContentPlaceHolderOutsideRelative_RadWindowManager2_ClientState" name="ctl00_ContentPlaceHolderOutsideRelative_RadWindowManager2_ClientState" type="hidden">
+	</div>
+    
+</div>
+
+            <div id="ctl00_RadWindowManager1" style="z-index:99999999;display:none;">
+	<div id="ctl00_NotesWindow" style="display:none;">
+		<div id="ctl00_NotesWindow_C" style="display:none;">
+
+		</div><input id="ctl00_NotesWindow_ClientState" name="ctl00_NotesWindow_ClientState" type="hidden" autocomplete="off">
+	</div><div id="ctl00_RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a onclick="$find(&#39;{0}&#39;).close(true);" class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="ctl00_RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Enter Value" onkeydown="return RadWindowprompt_detectenter(&#39;{0}&#39;, event, this);" type="text" class="rwDialogInput" value="{2}">
+			    </div>
+			    <div>
+				    <a onclick="$find(&#39;{0}&#39;).close(this.parentNode.parentNode.getElementsByTagName(&#39;input&#39;)[0].value);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find(&#39;{0}&#39;).close(null);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="ctl00_RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find(&#39;{0}&#39;).close(true);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find(&#39;{0}&#39;).close(false);" class="rwPopupButton" href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="ctl00_RadWindowManager1_ClientState" name="ctl00_RadWindowManager1_ClientState" type="hidden">
+</div>
+          
+
+            
+
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+;(function() {
+                        function loadHandler() {
+                            var hf = $get('ctl00_ctl05_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Web.UI, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4:sv-SE:03e3fdef-45f6-40a0-88ab-9645d53a0f37:8cee9284:ed057d30:a3b7d93f:92753c09:1c2121e:e24b8e95:91f742eb;Telerik.Web.UI.Skins, Version=2017.3.913.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4:sv-SE:ec15cfdd-3d98-479c-9377-1f0bd05448f9:bf721433';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_autoPostBack":true,"_postBackOnClick":true,"_postBackReference":"__doPostBack(\u0027ctl00$ContentPlaceHolder2$SchemaTabStrip\u0027,\u0027arguments\u0027)","_selectedIndex":0,"_skin":"Default","attributes":{},"clientStateFieldID":"ctl00_ContentPlaceHolder2_SchemaTabStrip_ClientState","multiPageID":"ctl00_ContentPlaceHolder2_SchemaMultiPage","selectedIndexes":["0"],"tabData":[{"value":"Schema","hoveredCssClass":"tabstripHover","pageViewID":"ctl00_ContentPlaceHolder2_SchemaView"}]}, null, null, $get("ctl00_ContentPlaceHolder2_SchemaTabStrip"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMultiPage, {"clientStateFieldID":"ctl00_ContentPlaceHolder2_SchemaMultiPage_ClientState","pageViewData":[{"id":"ctl00_ContentPlaceHolder2_SchemaView"},{"id":"ctl00_ContentPlaceHolder2_ResourceSchemaView"}],"selectedIndex":0}, null, null, $get("ctl00_ContentPlaceHolder2_SchemaMultiPage"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":37,"clientStateFieldID":"ctl00_ContentPlaceHolder2_AddLessonWindow_ClientState","formID":"aspnetForm","height":"450px","iconUrl":"","minimizeIconUrl":"","modal":true,"name":"AddLessonWindow","navigateUrl":"/SchemaAddLesson.aspx","skin":"Metro","title":"Lägg till lektion","visibleStatusbar":false,"width":"400px"}, null, null, $get("ctl00_ContentPlaceHolder2_AddLessonWindow"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":37,"clientStateFieldID":"ctl00_ContentPlaceHolder2_ExcludeSchoolsWindow_ClientState","formID":"aspnetForm","height":"460px","iconUrl":"","minimizeIconUrl":"","modal":true,"name":"ExcludeSchoolsWindow","navigateUrl":"/SchemaSchoolExclude.aspx","openerElementID":"ExcludeSchoolLink","skin":"Metro","title":"Skolor i ditt samlade schema","visibleStatusbar":false,"width":"420px"}, null, null, $get("ctl00_ContentPlaceHolder2_ExcludeSchoolsWindow"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":37,"clientStateFieldID":"ctl00_ContentPlaceHolder2_SubscribeWindow_ClientState","formID":"aspnetForm","height":"510px","iconUrl":"","minimizeIconUrl":"","modal":true,"name":"SubscribeWindow","navigateUrl":"/SchemaSubScribe.aspx","openerElementID":"SubscribeLink","skin":"Metro","title":"Prenumerera på ditt schema","visibleStatusbar":false,"width":"550px"}, null, null, $get("ctl00_ContentPlaceHolder2_SubscribeWindow"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":37,"clientStateFieldID":"ctl00_ContentPlaceHolder2_ReserveResourceWindow_ClientState","formID":"aspnetForm","height":"450px","iconUrl":"","minimizeIconUrl":"","modal":true,"name":"ReserveResourceWindow","navigateUrl":"/SchemaReserveResource.aspx","showContentDuringLoad":false,"skin":"Metro","title":"Boka resurs","visibleStatusbar":false,"width":"450px"}, null, null, $get("ctl00_ContentPlaceHolder2_ReserveResourceWindow"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"clientStateFieldID":"ctl00_ContentPlaceHolder2_RadWindowManager1_ClientState","formID":"aspnetForm","iconUrl":"","minimizeIconUrl":"","name":"RadWindowManager1","skin":"Metro","windowControls":"['ctl00_ContentPlaceHolder2_AddLessonWindow','ctl00_ContentPlaceHolder2_ExcludeSchoolsWindow','ctl00_ContentPlaceHolder2_SubscribeWindow','ctl00_ContentPlaceHolder2_ReserveResourceWindow']"}, null, {"child":"ctl00_ContentPlaceHolder2_AddLessonWindow"}, $get("ctl00_ContentPlaceHolder2_RadWindowManager1"));
+});
+
+WebForm_InitCallback();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_dropDownWidth":360,"_height":0,"_isTemplated":true,"_showDropDownOnTextboxClick":false,"_skin":"Default","_text":"Sök...","_uniqueId":"ctl00$SearchTB","_virtualScroll":true,"allowCustomText":true,"clientStateFieldID":"ctl00_SearchTB_ClientState","collapseAnimation":"{\"type\":27,\"duration\":450}","enableLoadOnDemand":true,"enableTextSelection":false,"expandAnimation":"{\"type\":27,\"duration\":450}","itemData":[],"itemRequestTimeout":1000,"loadingMessage":"Laddar...","localization":"{\"CheckAllString\":\"Markera alla\",\"AllItemsCheckedString\":\"Alla elever markerade\",\"ItemsCheckedString\":\"markerade objekt\"}"}, {"keyPressing":HandleKeyPress,"onClientBlur":OnClientBlur,"onClientFocus":OnClientFocus}, null, $get("ctl00_SearchTB"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":37,"clientStateFieldID":"ctl00_ContentPlaceHolderOutsideRelative_DialogWindow_ClientState","formID":"aspnetForm","height":"540px","iconUrl":"","minimizeIconUrl":"","name":"DialogWindow","navigateUrl":"about:blank","showContentDuringLoad":false,"skin":"Metro","visibleStatusbar":false,"width":"800px"}, {"close":OnClientclose,"show":OnClientshow}, null, $get("ctl00_ContentPlaceHolderOutsideRelative_DialogWindow"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"clientStateFieldID":"ctl00_ContentPlaceHolderOutsideRelative_RadWindowManager2_ClientState","formID":"aspnetForm","iconUrl":"","minimizeIconUrl":"","name":"RadWindowManager2","showContentDuringLoad":false,"skin":"Metro","windowControls":"['ctl00_ContentPlaceHolderOutsideRelative_DialogWindow']"}, null, {"child":"ctl00_ContentPlaceHolderOutsideRelative_DialogWindow"}, $get("ctl00_ContentPlaceHolderOutsideRelative_RadWindowManager2"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"behaviors":37,"clientStateFieldID":"ctl00_NotesWindow_ClientState","formID":"aspnetForm","height":"540px","iconUrl":"","minimizeIconUrl":"","modal":true,"name":"NotesWindow","navigateUrl":"/notes/Notes.aspx","skin":"Metro","visibleStatusbar":false,"width":"800px"}, null, null, $get("ctl00_NotesWindow"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"clientStateFieldID":"ctl00_RadWindowManager1_ClientState","formID":"aspnetForm","iconUrl":"","minimizeIconUrl":"","name":"RadWindowManager1","skin":"Default","windowControls":"['ctl00_NotesWindow']"}, null, {"child":"ctl00_NotesWindow"}, $get("ctl00_RadWindowManager1"));
+});
+//]]>
+</script>
+</form>
+    <script src="./Vklass-schema_files/masterpageFunctions.js.nedladdning" type="text/javascript"></script>
+   
+
+<script type="text/javascript">
+
+function NotesShowWindow(url, title) {
+    var oWnd = $find("ctl00_NotesWindow");
+    oWnd.setUrl(url);
+    oWnd.set_title(title);
+    oWnd.show();
+}
+</script> 
+
+
+</body></html>

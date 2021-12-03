@@ -1,0 +1,242 @@
+﻿jQuery(document).ready(function () {
+    jQuery('.toggleYSubject').live('click', function (event) {
+        var id = $(this).attr('data-id');
+        var reservationId = $(this).attr('data-reservationid');
+
+        var $this = $('#ySubject_' + id + '_' + reservationId);
+        $("ul[id^='ySubject']").not($this).hide();
+        jQuery($this).toggle();
+    });
+});
+
+function toggleEventInfo() {
+    $(".infotext").toggle();
+    if ($(".infotext").first().is(":hidden"))
+    {
+        $(".eventBox").removeAttr("style");
+        $(".toggleEventBox").css("background-image", "url(/App_Themes/Vklass/images/bg/ikoner/plus.png)");
+    }
+    else
+    {
+        $(".eventBox").css({ backgroundColor: "#f4f4f4", padding: "2px", marginBottom: "3px" });
+        $(".toggleEventBox").css("background-image", "url(/App_Themes/Vklass/images/bg/ikoner/minus.png)");
+    }
+}
+
+var oWidth, oHeight;
+function toggleLesson(id, show, h, w){
+      obj = document.getElementById(id);
+      objInner = document.getElementById("inner"+id);
+      
+      if(show){
+        oWidth = w;
+        oHeight = h;
+        obj.style.position="absolute";
+        obj.style.width="200px";
+        obj.style.height="220px";
+        obj.style.backgroundColor = "#f1f1f1";
+        obj.style.overflow = "auto";
+        obj.style.border = "solid 2px #d1d1d1";
+        obj.style.zIndex = "9999";
+        obj.style.padding = "2px";
+        obj.style.cursor = "";
+        obj.style.marginTop="3px";
+        objInner.className = "innerspanshow";
+        
+      }else{
+        obj.style.position="";
+        obj.style.width=oWidth;
+        obj.style.height=oHeight;
+        obj.style.backgroundColor = "transparent";
+        obj.style.overflow = "hidden";
+        obj.style.border = "";
+        obj.style.zIndex = "1";
+        obj.style.padding = "0px";
+        obj.style.cursor = "pointer";
+        objInner.className = "innerspan";
+      }
+}
+function toggleYSubjects(id, show, h, w) {
+    obj = document.getElementById(id);
+    objInner = document.getElementById("inner" + id);
+
+    if (show) {
+        oWidth = w;
+        oHeight = h;
+        obj.style.position = "absolute";
+        obj.style.width = "200px";
+        obj.style.height = "220px";
+        obj.style.backgroundColor = "#f1f1f1";
+        obj.style.overflow = "auto";
+        obj.style.border = "solid 2px #d1d1d1";
+        obj.style.zIndex = "9999";
+        obj.style.padding = "2px";
+        obj.style.cursor = "";
+        obj.style.marginTop = "3px";
+        obj.style.marginLeft = "3px";
+        objInner.className = "innerspanshow";
+
+    } else {
+        obj.style.position = "";
+        obj.style.width = oWidth;
+        obj.style.height = oHeight;
+        obj.style.backgroundColor = "transparent";
+        obj.style.overflow = "hidden";
+        obj.style.border = "";
+        obj.style.zIndex = "1";
+        obj.style.padding = "0px";
+        obj.style.cursor = "pointer";
+        objInner.className = "innerspan";
+    }
+}
+
+function delLesson(cID, lID) {
+    if (confirm(VKresources.Are_you_sure_you_want_to_delete_this_les___ + "?") == true) {
+        var content = $.ajax({ type: "GET", url: "/handler/delLesson.ashx?courseID=" + cID + "&lessonID=" + lID, async: false }).responseText;
+        if (content == "true" && document.getElementById("UpdateScheme")) {
+            document.getElementById("UpdateScheme").click();
+        }
+    }
+}
+
+function delLessonSerie(cID, lID, sID) {
+    if (confirm("Är du säker på att du vill ta bort alla lektioner och dess närvaro i denna lektionsserie?") == true) {
+        var content = $.ajax({ type: "GET", url: "/handler/delLesson.ashx?courseID=" + cID + "&lessonID=" + lID + "&serieID=" + sID, async: false }).responseText;
+        if (content == "true" && document.getElementById("UpdateScheme")) {
+            document.getElementById("UpdateScheme").click();
+        }
+    }
+}
+
+
+
+function showSmallCalender() {
+
+    document.getElementById('CalendarTimeReport').style.top = ($('#DatePeriod').offset().top + 37) + 'px';
+    document.getElementById('CalendarTimeReport').style.left = ($('#DatePeriod').position().left - 72) + 'px';
+    $('#CalendarTimeReport').toggle('slow');
+
+}
+
+function addLessonWindow() {
+
+    var oManager = GetRadWindowManager();
+    var oWnd = oManager.getWindowByName("AddLessonWindow");
+    var schoolID = '0';
+    var date = '';
+    if (document.getElementById("ctl00_ContentPlaceHolder2_DropDownSchool"))
+        schoolID = document.getElementById("ctl00_ContentPlaceHolder2_DropDownSchool").value;
+    if (document.getElementById("ctl00_ContentPlaceHolder2_StartDateWeek"))
+        date = document.getElementById("ctl00_ContentPlaceHolder2_StartDateWeek").value;
+    
+        oWnd.setUrl("SchemaAddLesson.aspx?schoolID=" + schoolID + "&date=" + escape(date));
+
+    oWnd.show();
+
+}
+
+function reserveResourceWindow() {
+
+    var oManager = GetRadWindowManager();
+    var oWnd = oManager.getWindowByName("ReserveResourceWindow");
+    var schoolID = '0';
+    var date = '';
+    var resourceID = '0'
+    if (document.getElementById("ctl00_ContentPlaceHolder2_DropDownSchool")) {
+        schoolID = document.getElementById("ctl00_ContentPlaceHolder2_DropDownSchool").value;
+    }
+    else if (document.getElementById("ctl00_ContentPlaceHolder2_SchoolID")) {
+        schoolID = document.getElementById("ctl00_ContentPlaceHolder2_SchoolID").value;
+    }
+    if (document.getElementById("ctl00_ContentPlaceHolder2_StartDateWeek"))
+        date = document.getElementById("ctl00_ContentPlaceHolder2_StartDateWeek").value;
+    if (document.getElementById("ctl00_ContentPlaceHolder2_DropDownResources"))
+        resourceID = document.getElementById("ctl00_ContentPlaceHolder2_DropDownResources").value;
+    oWnd.setUrl("SchemaReserveResource.aspx?schoolID=" + schoolID + "&date=" + escape(date) + "&resourceID=" + resourceID);
+
+    oWnd.show();
+
+}
+
+function editResourceWindow(resourceID, scheduleID) {
+
+    var oManager = GetRadWindowManager();
+    var oWnd = oManager.getWindowByName("ReserveResourceWindow");
+    var schoolID = '0';
+    var date = '';
+    if (document.getElementById("ctl00_ContentPlaceHolder2_DropDownSchool"))
+        schoolID = document.getElementById("ctl00_ContentPlaceHolder2_DropDownSchool").value;
+    else if (document.getElementById("ctl00_ContentPlaceHolder2_SchoolID"))
+        schoolID = document.getElementById("ctl00_ContentPlaceHolder2_SchoolID").value;
+    if (document.getElementById("ctl00_ContentPlaceHolder2_StartDateWeek"))
+        date = document.getElementById("ctl00_ContentPlaceHolder2_StartDateWeek").value;
+    oWnd.setUrl("SchemaReserveResource.aspx?schoolID=" + schoolID + "&date=" + escape(date) + "&resourceID=" + resourceID + "&resourceScheduleID=" + scheduleID);
+
+    oWnd.show();
+
+}
+
+
+function updateSchemePage() {
+    var oManager = GetRadWindowManager();
+    var oWnd = oManager.getWindowByName("AddLessonWindow");
+    oWnd.setUrl("/empty.htm");
+    oWnd.close();
+    
+    
+    if (document.getElementById("UpdateScheme")) {
+        document.getElementById("UpdateScheme").click();
+    }
+
+}
+
+function updateSchemePage2() {
+    var oManager = GetRadWindowManager();
+    var oWnd = oManager.getWindowByName("ExcludeSchoolsWindow");
+    oWnd.setUrl("/empty.htm");
+    oWnd.close();
+
+
+    if (document.getElementById("UpdateScheme")) {
+        document.getElementById("UpdateScheme").click();
+    }
+
+}
+
+function updateSchemePage3() {
+    var oManager = GetRadWindowManager();
+    var oWnd = oManager.getWindowByName("SubscribeWindow");
+    oWnd.setUrl("/empty.htm");
+    oWnd.close();
+}
+
+function updateSchemePage4(className) {
+    var oManager = GetRadWindowManager();
+    var oWnd = oManager.getWindowByName("ReserveResourceWindow");
+    oWnd.setUrl("/empty.htm");
+    oWnd.close();
+
+    
+    if (document.getElementsByClassName(className)) {
+        document.getElementsByClassName(className).click();
+    }
+
+}
+
+
+function closeAddLesson() {
+    var oManager = GetRadWindowManager();
+    var oWnd = oManager.getWindowByName("AddLessonWindow");
+    oWnd.setUrl("/empty.htm");
+    oWnd.close();
+
+}
+
+function closeReserveResource() {
+    var oManager = GetRadWindowManager();
+    var oWnd = oManager.getWindowByName("ReserveResourceWindow");
+    oWnd.setUrl("/empty.htm");
+    oWnd.close();
+
+}
+

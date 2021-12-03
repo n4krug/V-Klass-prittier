@@ -1,0 +1,311 @@
+﻿var startTimeoutValue = 0;
+
+function updateScoreboard() {
+    if (document.getElementById('ctl00_scoreboard')) {
+
+        var d = new Date();
+
+        $.get("/Handler/scoreboard.ashx?d=" + d.toUTCString(), function (data) {
+            if (data.length < 100) {
+                document.location.href = '/login.aspx';
+            } else {
+                $("#ctl00_scoreboard").html(data);
+            }
+        });
+
+    }
+    setTimeout(function () { updateScoreboard(); }, startTimeoutValue + 180000);
+}
+
+
+
+
+var handHeld = isHandheldDevice();
+var toggleState = function() {
+    if (readCookie("toggleToolsDrawer").length == 0) {
+        writeCookie("toggleToolsDrawer", false, 365);
+    }
+    return (readCookie("toggleToolsDrawer") === 'true');
+};
+
+
+$(document).ready(function () {
+
+    setTimeout(function () { updateScoreboard(); }, 29000);
+    setTimeout(function () { updateInactivitySeconds(); }, 21000);
+
+    if ($(window).width() >= 1300) {
+        $("#toolsInfoBox").hide();
+        showToolsDrawer();
+    } else {
+        hideToolsDrawer(false);
+        $("#toolsInfoBox").hide();
+    }
+
+    $(window).resize(function () {
+        if ($(window).width() >= 1300) {
+            $("#toolsInfoBox").hide();
+            showToolsDrawer();
+        } else {
+            hideToolsDrawer(false);
+        }
+    });
+
+    //Check if toolbar should be displayed on page load
+    if (toggleState() == true) {
+        hideToolsDrawer(false);
+    } else {
+        showToolsDrawer();
+    }
+
+});
+
+
+
+function isHandheldDevice() {
+    if (handHeld == null) {
+        if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+            handHeld = true;
+        } else {
+            handHeld = false;
+
+        }
+    }
+    return handHeld;
+}
+
+function addCurrentPage(id) {
+    var currPage;
+    currPage = document.URL;
+
+    $("#" + id).val(currPage);
+}
+
+function hideToolsDrawer(fullHide) {
+    $('#myToolsBox').hide();
+    $('#mytools').hide();
+    if (fullHide) {
+        $('#toggleBar').hide();
+    } else {
+        $('#toggleBar').css("right", -220);
+        $('#toggleBarFlaerp').css("right", -20);
+    }
+}
+
+function showToolsDrawer() {
+    $('#myToolsBox').show();
+    $('#mytools').show();
+    $("#mytools").css("font-weight", "bold").css("background-color", "#e1e1e1");
+   
+    $('#toggleBar').css("right", 0);
+    $('#toggleBarFlaerp').css("right", 200);
+}
+
+
+function toggleToolsDrawer() {
+
+    if (toggleState() == true) {
+        writeCookie("toggleToolsDrawer", false, 365);
+    } else {
+        writeCookie("toggleToolsDrawer", true, 365);
+    }
+
+    $('#myToolsBox').hide();
+    $('#mytools').hide();
+    $("#toolsInfoBox").hide();
+
+    var $marginLefty = $('#toggleBar');
+    $marginLefty.animate({
+        right: parseInt($marginLefty.css('right'), 10) == 0 ?
+          -220 :
+          0
+    }, 200, function () {
+        if (parseInt($marginLefty.css('right'), 10) == 0) {
+            $('#myToolsBox').show();
+            $('#mytools').show();
+            $("#mytools").css("font-weight", "bold").css("background-color", "#e1e1e1");
+        }
+    });
+
+    var flaerp = $('#toggleBarFlaerp');
+    flaerp.animate({
+        right: parseInt(flaerp.css('right'), 10) == -20 ?
+          200 :
+          -20
+    }, 200);
+
+}
+
+
+function toggleMyTools() {
+    $("#mytools").css("font-weight", "bold").css("background-color", "#e1e1e1");
+    $('#myToolsBox').show();
+}
+
+
+
+ function updateInactivitySeconds(){
+     startTimeoutValue = startTimeoutValue + 5000;
+     if (startTimeoutValue>7200000)
+        document.location.href = '/login.aspx';
+     setTimeout(function () { updateInactivitySeconds(); }, 20000);
+ }
+
+ function OnClientBlur(sender, args) {
+     if (sender.get_text() == '') { sender.set_text(VKresources.Search_withdots); }
+ }
+
+ function OnClientFocus(sender, args) {
+     if (sender.get_text() == VKresources.Search_withdots) { sender.set_text(''); }
+ }
+
+ function HandleKeyPress(sender, eventArgs) {
+     if (eventArgs.get_domEvent().keyCode == 13) {
+         document.getElementById("MasterPageSearchButton").click();
+     }
+ }
+
+/* Quicklinks */
+
+$("#EditQuickLinks").live('click', function() {
+    if ($(this).text() == VKresources.Edit) {
+         $("#QuickLinksWrapper").hide();
+         $("#EditQuickLinksWrapper").show();
+         $(this).text(VKresources.Back);
+         return false;
+    } else {
+         $("#QuickLinksWrapper").show();
+         $("#EditQuickLinksWrapper").hide();
+         $(this).text(VKresources.Edit);
+         return false;
+     }
+     return false;
+ });
+ $(".QuickLinkUp").live('click', function () {
+     $(this).parent().parent().insertBefore($(this).parent().parent().prev(".quickLink"));
+ });
+ $(".QuickLinkDown").live('click', function () {
+     $(this).parent().parent().insertAfter($(this).parent().parent().next(".quickLink"));
+ });
+ $("a[id^='hide_']").live('click', function () {
+     var id = $(this).attr("id").match(/\d+/);
+     if ($(this).text() == "Dölj") {
+         $(this).parent().parent().attr('data-hide', 'true');
+         $(this).text(VKresources.Show);
+     }
+     else {
+         $(this).parent().parent().attr('data-hide', 'false');
+         $(this).text(VKresources.Hide);
+     }
+ });
+ $("a[id^='delete_']").live('click', function () {
+     var id = $(this).attr("id").match(/\d+/);
+     var userId = $(this).parent().parent().attr('data-userid');
+     if (confirm(VKresources.Are_yousureyouwanttodeletethislink)) {
+
+         //Remove object from DOM
+         $(this).parent().parent().remove();
+         //Retrieve remaining menu objects
+         var data = [];
+         $.each($('#EditQuickLinksWrapper').find('li.quickLink'), function(index) {
+             var li = $(this);
+             data.push({
+                 QuickLinkID: li.attr('data-id'),
+                 Sorting: index,
+                 UserID: li.attr('data-userid'),
+                 IsHidden: li.attr('data-hide')
+             });
+         });
+         //Delete object from database
+         $.ajax({
+             url: "/Handler/QuickLinks.ashx?q=delete&Id=" + id,
+             type: 'POST',
+             success: function () {
+                 //Update remaining menu objects in database
+                 $.ajax({
+                     url: "/Handler/QuickLinks.ashx?q=sorting",
+                     contentType: "application/json; charset=utf-8",
+                     type: 'POST',
+                     dataType: "json",
+                     data: JSON.stringify(data),
+                     success: OnComplete,
+                     error: OnFail
+                 });
+             },
+             error: OnFail
+         });
+
+         return false;
+     }
+ });
+ $("#SaveEditQuickLink").live('click', function () {
+     EditQuickLink();
+     return false;
+ });
+ $("#SaveNewQuickLink").live('click', function () {
+     //EditQuickLink();
+     var url = $('#newQuickLinkUrl').val();
+     var name = $('#newQuickLinkName').val();
+     if (url.length == 0) {
+         alert(VKresources.You_mustenteraURLaddress);
+         return false;
+     }
+     if (name.length == 0) {
+         alert(VKresources.You_mustenteranameforthelink);
+         return false;
+     }
+
+     var data = [];
+     data.push({
+         SchoolID: 0,
+         Url: url,
+         Name: name,
+         Target: '_self',
+         OnlyTeachers: false
+     });
+     $.ajax({
+         url: "/Handler/QuickLinks.ashx?q=insert",
+         contentType: "application/json; charset=utf-8",
+         type: 'POST',
+         dataType: "json",
+         data: JSON.stringify(data),
+         success: EditQuickLink,
+         error: OnFail
+     });
+     return false;
+ });
+ function OnComplete(result) {
+     $("#editQuickLinkMessage").text(VKresources.Your_changesaresaved);
+     $("#QuickLinksWrapper").show();
+     $("#EditQuickLinksWrapper").hide();
+     $("#EditQuickLinks").text(VKresources.Edit);
+     $("#UpdateQuickLinks").click();
+
+ }
+ function OnFail(xhr, status, error) {
+     $("#editQuickLinkMessage").text(VKresources.Something_wentwrongwhentryingtosavetryagainortrylater);
+ }
+
+ function EditQuickLink() {
+     var data = [];
+     $.each($('#EditQuickLinksWrapper').find('li.quickLink'), function (index) {
+         var li = $(this);
+         data.push({
+             QuickLinkID: li.attr('data-id'),
+             Sorting: index,
+             UserID: li.attr('data-userid'),
+             IsHidden: li.attr('data-hide')
+         });
+     });
+
+     $.ajax({
+         url: "/Handler/QuickLinks.ashx?q=sorting",
+         contentType: "application/json; charset=utf-8",
+         type: 'POST',
+         dataType: "json",
+         data: JSON.stringify(data),
+         success: OnComplete,
+         error: OnFail
+     });
+ }
+

@@ -1,0 +1,18 @@
+﻿window['rsConf'] = {
+	general: {
+		usePost: true,
+		skipHiddenContent: true
+	},
+	ui: {
+		tools: {
+			enlarge: false,
+			textmode: false,
+			download: false
+		}
+	}
+};
+
+/* Preserve these selectors and all their children for RS markup changes */
+$(function () {
+	$('.profil-actions, .actions, .scheme-actions, .googleapps-menu, .education-menu, .course-menu, .discussionOnPageWide-action').addClass('rs_preserve');
+})
