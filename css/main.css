@@ -38,6 +38,7 @@
 
 * {
 	background-image: unset !important;
+	width: unset !important;
 }
 
 html {
@@ -52,6 +53,7 @@ table {
 
 .list {
 	background-color: var(--background-color-300) !important;
+	margin-top: 1rem !important;
 }
 
 td {
@@ -266,7 +268,7 @@ span {
 	margin-bottom: 1rem !important;
 }
 
-.metainfo strong {
+strong {
 	color: var(--text-color-500) !important;
 }
 
@@ -302,6 +304,7 @@ span {
 .start-right {
 	float: right !important;
 	background-color: var(--background-color-300) !important;
+	width: 189px !important;
 }
 
 .lessonsTodayList {
@@ -325,12 +328,17 @@ b {
 	color: var(--text-color-200) !important;
 }
 
+.profil-actions {
+	right: 0 !important;
+}
+
 .profil-actions li a {
 	background-color: var(--background-color-400) !important;
 	background-image: var(--lates-url) !important;
-	padding-left: 1rem;
+	padding-inline: 1rem !important;
 	background-position-x: 1rem;
 	border-radius: var(--border-radius) !important;
+	margin-right: 0 !important;
 }
 
 #toggleBarFlaerp,
@@ -412,4 +420,215 @@ table.time-table td.resv-span6 {
 
 .list td.kurs {
 	background-image: var(--course-url) !important;
+}
+
+.actions {
+	right: 0 !important;
+}
+
+.actions li a {
+	background-color: var(--background-color-400) !important;
+	text-align: center !important;
+	text-indent: 0 !important;
+	width: unset !important;
+	padding: 1.5rem 2rem !important;
+	line-height: unset !important;
+	border-radius: var(--border-radius);
+}
+
+.headline {
+	margin-right: 0 !important;
+	margin-top: 1rem !important;
+	margin-bottom: 0 !important;
+	color: var(--text-color-500) !important;
+}
+
+.deltagare-list {
+	background-color: var(--background-color-300) !important;
+}
+
+.basicInfoPanel {
+	background-color: var(--background-color-300) !important;
+	border: none !important;
+	margin-top: 0 !important;
+	border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+}
+
+.rmpView .headline {
+	border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+}
+
+.messagethread-metainfo {
+	background-color: var(--background-color-400) !important;
+	margin: unset !important;
+	margin-bottom: 1rem !important;
+	border-radius: var(--border-radius) !important;
+}
+
+.messagethread-metainfo .search {
+	border: none !important;
+}
+
+.messagethread-metainfo .meta-actions a {
+	display: none !important;
+}
+
+.article-big .content-big {
+	background-color: var(--background-color-300) !important;
+	margin-right: unset !important;
+	overflow: hidden;
+	border-radius: var(--border-radius) !important;
+}
+
+.messagethread-client-toolbar {
+	background-color: var(--background-color-400) !important;
+}
+
+.RadGrid {
+	border: none !important;
+}
+
+.RadGrid .rgMasterTable {
+	padding: 0 1.5rem !important;
+}
+
+.RadGrid .rgMasterTable colgroup *:nth-child(1),
+.RadGrid .rgMasterTable colgroup *:nth-child(4) {
+	width: 25px !important;
+}
+
+.RadGrid .rgMasterTable colgroup *:nth-child(2) {
+	width: 20px !important;
+}
+
+.messagethread-list-topic {
+	color: var(--text-color-200) !important;
+}
+
+.messagethread-list-topic a {
+	color: var(--text-color-500) !important;
+}
+
+.messagethread-client-toolbar a {
+	background-color: var(--background-color-500) !important;
+	border: none !important;
+	padding: 0.75rem 1rem !important;
+}
+
+.messagethread-client-toolbar .single-actions .disabled {
+	background-color: var(--background-color-300) !important;
+}
+
+.messagethread-list-toolbar > * {
+	background-color: var(--background-color-400) !important;
+}
+
+.messagethread-list-toolbar .filter .current {
+	background-color: var(--background-color-500) !important;
+}
+
+.messagethread-metainfo .meta-actions input {
+	background-color: var(--background-color-500) !important;
+	color: var(--text-color-200) !important;
+	padding: 0.25rem 1rem !important;
+	transform: translateY(-0.25rem);
+}
+
+.profil {
+	padding-left: unset !important;
+}
+
+.profil-metainfo {
+	background-color: var(--background-color-400) !important;
+	border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+	margin-right: unset !important;
+	margin-bottom: unset !important;
+}
+
+.friends-new {
+	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
+	margin-right: unset !important;
+}
+
+.dataTables_filter {
+	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
+	margin-right: unset !important;
+	border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+}
+
+.dataTables_filter input {
+	background-color: var(--background-color-500) !important;
+	border-radius: var(--border-radius) !important;
+	border: none !important;
+	margin-right: 1rem !important;
+	margin-bottom: 0.75rem !important;
+	padding: 0.25rem 1rem;
+	color: var(--text-color-200) !important;
+}
+
+.friends {
+	margin-top: 1rem !important;
+	background-color: var(--background-color-300) !important;
+}
+
+.feed {
+	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
+}
+
+.profile-feed {
+	background-color: unset !important;
+}
+
+.feed-body {
+	width: calc(100% - 60px) !important;
+}
+
+.feed-body a {
+	color: var(--text-color-500) !important;
+}
+
+.feed-date {
+	color: var(--text-color-200) !important;
+}
+
+.profil-top,
+.guestbook-top,
+.guestbook-post {
+	background-color: var(--background-color-300) !important;
+	border: unset !important;
+}
+
+.profil-left {
+	border-right: 2px solid var(--background-color-400) !important;
+	padding-right: 1rem !important;
+}
+
+.profil-right-bar {
+	padding-left: 1rem !important;
+}
+
+.profil-left,
+.profil-right-bar,
+#pressframe {
+	background-color: unset !important;
+}
+
+.guestbook-metainfo {
+	margin-right: unset !important;
+	background-color: var(--background-color-400) !important;
+}
+
+.guestbook-top .multiline-input {
+	background-color: var(--background-color-500) !important;
+}
+
+.guestbook-text {
+	width: calc(100% - 55px) !important;
+}
+
+.profil-info li {
+	color: var(--text-color-500) !important;
 }
