@@ -4,7 +4,9 @@ let current_color_scheme = chrome.storage.sync.get("colorScheme")
 
 let color_scheme_inp = document.getElementById("color-scheme-select");
 
-color_scheme_inp.value = current_color_scheme
+avaliableSchemes = ["none", "midnight", "midday", "darkness", "dark-mint", "dark-forest"]
+
+// color_scheme_inp.selectedIndex = avaliableSchemes.indexOf(current_color_scheme)
 
 
 document.getElementById("submit-btn").addEventListener("click", () => {
