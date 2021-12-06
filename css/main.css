@@ -45,10 +45,18 @@ html {
 	background-color: var(--background-color-100) !important;
 }
 
+p {
+	color: var(--text-color-200) !important;
+}
+
 table {
 	border-radius: var(--border-radius) !important;
 	overflow: hidden !important;
 	width: 100% !important;
+}
+
+.table th {
+	color: var(--text-color-200) !important;
 }
 
 .list {
@@ -631,4 +639,163 @@ table.time-table td.resv-span6 {
 
 .profil-info li {
 	color: var(--text-color-500) !important;
+}
+
+.eventsOverviewControl table {
+	background-color: var(--background-color-200) !important;
+	margin-top: 1rem !important;
+}
+
+.eventsOverviewControl .monthHeadline {
+	background-color: var(--background-color-400) !important;
+	margin-top: 1rem !important;
+	padding-inline: 1rem !important;
+}
+
+.eventsOverviewControl table tr .DayInfo:nth-child(even) {
+	background-color: var(--background-color-300) !important;
+}
+
+.eventsOverviewControl table tr .WeekTD {
+	background-color: var(--background-color-400) !important;
+}
+
+.eventsOverviewControl table tr th {
+	background-color: var(--background-color-400) !important;
+	color: var(--text-color-200) !important;
+}
+
+.eventsOverviewControl .monthHeadline .NextMonthLB {
+	float: right !important;
+}
+
+.eventsOverviewControl .monthHeadline span {
+	margin-left: calc(50% - 110px) !important;
+}
+
+.eventsOverviewControl .lessonObject {
+	background-color: var(--background-color-400) !important;
+}
+
+.eventsOverviewControl .lessonObject:hover {
+	background-color: var(--background-color-500) !important;
+}
+
+.eventsOverviewControl .vacantDayObject {
+	background-color: var(--accent-color-100) !important;
+}
+
+.eventsOverviewControl .vacantDayObject:hover {
+	background-color: var(--accent-color-200) !important;
+}
+
+.myschool .lunch {
+	margin-top: 1rem !important;
+	border-radius: var(--border-radius) !important;
+	overflow: hidden !important;
+}
+
+.myschool .lunch dt {
+	margin: unset !important;
+	background-color: var(--background-color-400) !important;
+}
+
+.myschool .lunch dd {
+	background-color: var(--background-color-300) !important;
+	padding-top: 1rem !important;
+}
+
+.fileList td {
+	background-color: unset !important;
+}
+
+.education-menu li {
+	background-color: var(--background-color-300) !important;
+	border-bottom: 1px solid var(--background-color-400) !important;
+}
+
+.education-menu {
+	border-radius: var(--border-radius) !important;
+	overflow: hidden !important;
+}
+
+.list tr:nth-child(even) {
+	background-color: var(--background-color-400) !important;
+}
+
+.judgementPostBox {
+	background-color: var(--background-color-400) !important;
+	border: unset !important;
+	color: var(--text-color-500) !important;
+}
+
+#judgementLogContainer2 {
+	border: unset !important;
+	overflow: hidden !important;
+}
+
+a.saveButton {
+	background-color: var(--background-color-500) !important;
+	border: unset !important;
+	border-radius: var(--border-radius) !important;
+	padding: 0.5rem 1rem !important;
+}
+
+.pageSubHeadline {
+	background-color: var(--background-color-400) !important;
+	color: var(--text-color-500) !important;
+	margin: unset !important;
+	border-radius: var(--border-radius) !important;
+}
+
+.curriculumCourses .RadGrid .rgMasterTable .rgHeader {
+	background-color: var(--background-color-400) !important;
+}
+
+.curriculumCourses .RadGrid .rgMasterTable {
+	border-radius: var(--border-radius) !important;
+	overflow: hidden !important;
+	margin-top: 1rem !important;
+}
+
+.RadGrid_Default .rgGroupHeader,
+.RadGrid_Default .rgMasterTable td.rgGroupCol,
+.RadGrid_Default .rgMasterTable td.rgExpandCol,
+.curriculumCourses .RadGrid .rgMasterTable .rgFooter td {
+	background-color: var(--background-color-300) !important;
+}
+
+.curriculumCourses .RadGrid .rgMasterTable .rgAltRow,
+.curriculumCourses table .rgRow {
+	background-color: var(--background-color-200) !important;
+}
+
+.RadGrid_Default {
+	background-color: unset !important;
+}
+
+.headerAttendance {
+	background-color: var(--background-color-400) !important;
+	margin: unset !important;
+	margin-top: 1rem !important;
+	color: var(--text-color-500) !important;
+}
+
+.attendanceCoursePanel {
+	background-color: var(--background-color-300) !important;
+	border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+}
+
+.CourseSummaryAttendance {
+	color: var(--text-color-200) !important;
+	width: 50% !important;
+}
+
+.attendanceCoursePanel .statTable {
+	width: 50% !important;
+	margin-left: auto;
+}
+
+.SummaryAttendance {
+	color: var(--text-color-200) !important;
 }
