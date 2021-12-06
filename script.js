@@ -42,12 +42,12 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                     });
 
 
-                    chrome.action.setIcon({path: { 
-                        "16": `icons/${colorScheme}_icon_16.png`,
-                        "48": `icons/${colorScheme}_48.png`,
-                       "128": `icons/${colorScheme}_128.png` 
-                    }})
                 }
+                chrome.action.setIcon({path: { 
+                    "16": `icons/${colorScheme}_icon_16.png`,
+                    "48": `icons/${colorScheme}_48.png`,
+                   "128": `icons/${colorScheme}_128.png` 
+                }})
                 
                 
             }
