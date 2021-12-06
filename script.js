@@ -43,20 +43,19 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
 
                 }
+                
                 chrome.action.setIcon({path: { 
-<<<<<<< Updated upstream
-                    "16": `icons/${colorScheme}_icon_16.png`,
-                    "48": `icons/${colorScheme}_48.png`,
-                   "128": `icons/${colorScheme}_128.png` 
-                }}, () => {})
-=======
                     16: `icons/${colorScheme}_icon_16.png`,
-                    48: `icons/${colorScheme}_48.png`,
-                   128: `icons/${colorScheme}_128.png` 
+                    48: `icons/${colorScheme}_icon_48.png`,
+                   128: `icons/${colorScheme}_icon_128.png` 
                 }})
->>>>>>> Stashed changes
                 
-                
+            } else {
+                chrome.action.setIcon({path: { 
+                    16: `icons/default_icon_16.png`,
+                    48: `icons/default_icon_48.png`,
+                   128: `icons/default_icon_128.png` 
+                }})
             }
         })
         

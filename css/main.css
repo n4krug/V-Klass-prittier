@@ -301,6 +301,7 @@ strong {
 .right-topic {
 	background-color: var(--background-color-400) !important;
 	color: var(--text-color-500) !important;
+	border: unset !important;
 }
 
 .newsPost {
@@ -355,11 +356,17 @@ b {
 }
 
 #toggleBarFlaerp {
+	width: 60px !important;
 	background-image: var(--menu-url) !important;
+}
+
+#toggleBar {
+	width: 230px !important;
 }
 
 #myToolsBox {
 	background-color: var(--background-color-400) !important;
+	width: 219px !important;
 }
 
 .hide-menu-button,
