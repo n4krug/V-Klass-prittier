@@ -1,11 +1,11 @@
 :root {
 	--background-color-100: hsl(210, 50%, 20%) !important;
 	--background-color-200: hsl(210, 40%, 30%) !important;
-	--background-color-300: #476685 !important;
+	--background-color-300: hsl(210, 30%, 40%) !important;
 	--background-color-400: hsl(210, 20%, 50%) !important;
 	--background-color-500: hsl(210, 10%, 60%) !important;
 
-	--text-color-500: #cce6ff;
+	--text-color-500: hsl(209, 100%, 90%);
 	--text-color-200: hsl(210, 100%, 80%);
 
 	--accent-color-100: hsl(0, 100%, 80%) !important;
