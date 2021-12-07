@@ -41,3 +41,8 @@ select {
 button:hover {
 	cursor: pointer;
 }
+
+option {
+	background-position: initial;
+	background-image: url("icons/default_icon_16.png");
+}

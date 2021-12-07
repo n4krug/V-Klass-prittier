@@ -347,7 +347,7 @@ b {
 	padding-inline: 1rem !important;
 	background-position-x: 1rem;
 	border-radius: var(--border-radius) !important;
-	margin-right: 0 !important;
+	margin-right: 0.5rem !important;
 }
 
 #toggleBarFlaerp,

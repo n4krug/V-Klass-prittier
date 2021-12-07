@@ -50,3 +50,17 @@
 #ctl00_PageLogo {
 	content: url("https://svgur.com/i/ccV.svg");
 }
+
+.nav,
+.article,
+.metainfo,
+.start-top,
+.nav .search p,
+.leftmenu,
+.profil-metainfo,
+.messagethread-metainfo,
+.article-big .content-big,
+#toggleBarFlaerpClick {
+	border-top: 3px solid white;
+	border-radius: var(--border-radius) !important;
+}
