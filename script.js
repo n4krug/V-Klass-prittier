@@ -1,13 +1,13 @@
-// function changeImages() {
-//     vellinge_logo = document.getElementById("ctl00_PageLogo");
+function changeImages(vellinge_url) {
+     vellinge_logo = document.getElementById("ctl00_PageLogo");
         
-//         // vellinge_url = chrome.extension.getURL("images/Vellinge.svg");
-//     console.log(vellinge_url)
+         // vellinge_url = chrome.extension.getURL("images/Vellinge.svg");
+     console.log(vellinge_url)
 
-//     vellinge_logo.src = vellinge_url;
+     vellinge_logo.src = vellinge_url;
 
-//     console.log("image changed")
-// }
+     console.log("image changed")
+}
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -41,7 +41,6 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                         console.log("Inserted");
                     });
 
-
                 }
                 
                 chrome.action.setIcon({path: { 
@@ -61,24 +60,23 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         
     }
     
-    // if (changeInfo.status === "complete") {
-    //     chrome.storage.sync.get("colorScheme", ({colorScheme}) => {
-    //         if (colorScheme != "none") {
-    //             if (tab.url.startsWith("https://www.vklass.se/")) {
-                    
-    //                 vellinge_url = chrome.extension.getURL("images/Vellinge.svg");
-
-    //                 chrome.scripting.executeScript({
-    //                     target: {tabId: tabId},
-    //                     // files: ["client.js"],
-    //                     func: changeImages,
-    //                     args: [vellinge_url]
-    //                 }, () => {
-    //                     console.log("Changed images");
-    //                 });
-    //             }
-    //         }
-    //     })
-    // }    
+    if (changeInfo.status === "loading") {
+        chrome.storage.sync.get("colorScheme", ({colorScheme}) => {
+            if (colorScheme != "none") {
+                if (tab.url.startsWith("https://www.vklass.se/")) {
+                 
+                    vellinge_url = chrome.runtime.getURL(`images/${colorScheme}_vellinge.svg`);
+                    chrome.scripting.executeScript({
+                        target: {tabId: tabId},
+                        // files: ["client.js"],
+                        func: changeImages,
+                        args: [vellinge_url]
+                    }, () => {
+                        console.log("Changed images");
+                    });
+                }
+            }
+        })
+    }    
 })
 

@@ -1,37 +1,3 @@
-/* :root {
-	--background-color-100: hsl(250, 10%, 10%) !important;
-	--background-color-200: hsl(250, 10%, 20%) !important;
-	--background-color-300: hsl(250, 12.5%, 30%) !important;
-	--background-color-400: hsl(250, 15%, 40%) !important;
-	--background-color-500: hsl(250, 15%, 50%) !important;
-
-	--text-color-500: hsl(213, 100%, 95%);
-	--text-color-200: hsl(213, 50%, 80%);
-
-	--home-profile-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M12,3L2,12H5V20H19V12H22L12,3M12,8.75A2.25,2.25 0 0,1 14.25,11A2.25,2.25 0 0,1 12,13.25A2.25,2.25 0 0,1 9.75,11A2.25,2.25 0 0,1 12,8.75M12,15C13.5,15 16.5,15.75 16.5,17.25V18H7.5V17.25C7.5,15.75 10.5,15 12,15Z"></path></svg>') !important;
-	--messages-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path></svg>') !important;
-	--contacts-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z"></path></svg>') !important;
-	--feed-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M18 22H6V16L10 12L6 8V2H18V8L14 12L18 16M8 7.5L12 11.5L16 7.5V4H8M12 12.5L8 16.5V20H16V16.5M14 18H10V17.2L12 15.2L14 17.2Z"></path></svg>') !important;
-
-	--account-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"></path></svg>') !important;
-	--logout-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M14.08,15.59L16.67,13H7V11H16.67L14.08,8.41L15.5,7L20.5,12L15.5,17L14.08,15.59M19,3A2,2 0 0,1 21,5V9.67L19,7.67V5H5V19H19V16.33L21,14.33V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5C3,3.89 3.89,3 5,3H19Z"></path></svg>') !important;
-
-	--lates-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M21 11.11V5C21 3.9 20.11 3 19 3H14.82C14.4 1.84 13.3 1 12 1S9.6 1.84 9.18 3H5C3.9 3 3 3.9 3 5V19C3 20.11 3.9 21 5 21H11.11C12.37 22.24 14.09 23 16 23C19.87 23 23 19.87 23 16C23 14.09 22.24 12.37 21 11.11M12 3C12.55 3 13 3.45 13 4S12.55 5 12 5 11 4.55 11 4 11.45 3 12 3M5 19V5H7V7H17V5H19V9.68C18.09 9.25 17.08 9 16 9H7V11H11.1C10.5 11.57 10.04 12.25 9.68 13H7V15H9.08C9.03 15.33 9 15.66 9 16C9 17.08 9.25 18.09 9.68 19H5M16 21C13.24 21 11 18.76 11 16S13.24 11 16 11 21 13.24 21 16 18.76 21 16 21M16.5 16.25L19.36 17.94L18.61 19.16L15 17V12H16.5V16.25Z"></path></svg>') !important;
-
-	--side-test-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"></path></svg>') !important;
-	--side-calendar-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19M9,14V16H7V14H9M13,14V16H11V14H13M17,14V16H15V14H17Z"></path></svg>') !important;
-	--side-course-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M19 2L14 6.5V17.5L19 13V2M6.5 5C4.55 5 2.45 5.4 1 6.5V21.16C1 21.41 1.25 21.66 1.5 21.66C1.6 21.66 1.65 21.59 1.75 21.59C3.1 20.94 5.05 20.5 6.5 20.5C8.45 20.5 10.55 20.9 12 22C13.35 21.15 15.8 20.5 17.5 20.5C19.15 20.5 20.85 20.81 22.25 21.56C22.35 21.61 22.4 21.59 22.5 21.59C22.75 21.59 23 21.34 23 21.09V6.5C22.4 6.05 21.75 5.75 21 5.5V19C19.9 18.65 18.7 18.5 17.5 18.5C15.8 18.5 13.35 19.15 12 20V6.5C10.55 5.4 8.45 5 6.5 5Z"></path></svg>') !important;
-	--side-class-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z"></path></svg>') !important;
-	--side-files-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF" d="M19,20H4C2.89,20 2,19.1 2,18V6C2,4.89 2.89,4 4,4H10L12,6H19A2,2 0 0,1 21,8H21L4,8V18L6.14,10H23.21L20.93,18.5C20.7,19.37 19.92,20 19,20Z"></path></svg>') !important;
-	--side-school-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF"  d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"></path></svg>') !important;
-	--side-tools-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF"  d="M21.71 20.29L20.29 21.71A1 1 0 0 1 18.88 21.71L7 9.85A3.81 3.81 0 0 1 6 10A4 4 0 0 1 2.22 4.7L4.76 7.24L5.29 6.71L6.71 5.29L7.24 4.76L4.7 2.22A4 4 0 0 1 10 6A3.81 3.81 0 0 1 9.85 7L21.71 18.88A1 1 0 0 1 21.71 20.29M2.29 18.88A1 1 0 0 0 2.29 20.29L3.71 21.71A1 1 0 0 0 5.12 21.71L10.59 16.25L7.76 13.42M20 2L16 4V6L13.83 8.17L15.83 10.17L18 8H20L22 4Z"></path></svg>') !important;
-	--side-teams-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF"  d="M12,2C6.47,2 2,6.5 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M15.6,8.34C16.67,8.34 17.53,9.2 17.53,10.27C17.53,11.34 16.67,12.2 15.6,12.2A1.93,1.93 0 0,1 13.67,10.27C13.66,9.2 14.53,8.34 15.6,8.34M9.6,6.76C10.9,6.76 11.96,7.82 11.96,9.12C11.96,10.42 10.9,11.5 9.6,11.5C8.3,11.5 7.24,10.42 7.24,9.12C7.24,7.81 8.29,6.76 9.6,6.76M9.6,15.89V19.64C7.2,18.89 5.3,17.04 4.46,14.68C5.5,13.56 8.13,13 9.6,13C10.13,13 10.8,13.07 11.5,13.21C9.86,14.08 9.6,15.23 9.6,15.89M12,20C11.72,20 11.46,20 11.2,19.96V15.89C11.2,14.47 14.14,13.76 15.6,13.76C16.67,13.76 18.5,14.15 19.44,14.91C18.27,17.88 15.38,20 12,20Z"></path></svg>') !important;
-	--side-help-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF"  d="M15.07,11.25L14.17,12.17C13.45,12.89 13,13.5 13,15H11V14.5C11,13.39 11.45,12.39 12.17,11.67L13.41,10.41C13.78,10.05 14,9.55 14,9C14,7.89 13.1,7 12,7A2,2 0 0,0 10,9H8A4,4 0 0,1 12,5A4,4 0 0,1 16,9C16,9.88 15.64,10.67 15.07,11.25M13,19H11V17H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"></path></svg>') !important;
-	--side-swap-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF"  d="M17 15L14 12V14H10V12L7 15L10 18V16H14V18M14 2H6A2 2 0 0 0 4 4V20A2 2 0 0 0 6 22H18A2 2 0 0 0 20 20V8L14 2M18 20H6V4H13V9H18Z"></path></svg>') !important;
-	--side-pc-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF"  d="M4,6H20V16H4M20,18A2,2 0 0,0 22,16V6C22,4.89 21.1,4 20,4H4C2.89,4 2,4.89 2,6V16A2,2 0 0,0 4,18H0V20H24V18H20Z"></path></svg>') !important;
-	--side-cloud-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="48" viewBox="0 0 24 24"><path fill="%23D1E6FF"  d="M19.35,10.03C18.67,6.59 15.64,4 12,4C9.11,4 6.6,5.64 5.35,8.03C2.34,8.36 0,10.9 0,14A6,6 0 0,0 6,20H19A5,5 0 0,0 24,15C24,12.36 21.95,10.22 19.35,10.03Z"></path></svg>') !important;
-} */
-
 :root {
 	--border-radius: 0.4rem;
 }
@@ -39,10 +5,12 @@
 * {
 	background-image: unset !important;
 	width: unset !important;
+	color: inherit !important;
 }
 
 html {
 	background-color: var(--background-color-100) !important;
+	color: var(--text-color-200) !important;
 }
 
 p {
@@ -62,11 +30,11 @@ table {
 .list {
 	background-color: var(--background-color-300) !important;
 	margin-top: 1rem !important;
+	color: var(--text-color-200) !important;
 }
 
 td {
-	border-color: var(--background-color-500) !important;
-	color: var(--text-color-200) !important;
+	border-color: var(--accent-bg-color-200) !important;
 }
 
 th {
@@ -74,9 +42,13 @@ th {
 }
 
 table thead {
-	background-color: var(--background-color-400) !important;
-	color: var(--text-color-500) !important;
+	background-color: var(--accent-bg-color-100) !important;
 	border-color: var(--background-color-100) !important;
+	color: var(--accent-text-color-100) !important;
+}
+
+span {
+	color: inherit !important;
 }
 
 .bodyContainer {
@@ -93,6 +65,7 @@ table thead {
 	padding: 0rem 2rem !important;
 	margin-inline: 10rem !important;
 	border-radius: var(--border-radius);
+	color: var(--text-color-200) !important;
 }
 
 .article {
@@ -141,14 +114,15 @@ table thead {
 
 .nav .search p {
 	margin: 0 !important;
-	background-color: var(--background-color-500) !important;
+	background-color: var(--accent-bg-color-200) !important;
 	border-radius: var(--border-radius);
+	color: var(--accent-text-color-100) !important;
 }
 
 .nav .search .rcbInput {
 	margin-left: 1rem !important;
 	width: 95% !important;
-	color: var(--text-color-500) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .nav .searchButton {
@@ -196,10 +170,12 @@ table thead {
 	background-color: var(--background-color-400) !important;
 	border: 0 !important;
 	border-radius: var(--border-radius) !important;
+	color: var(--text-color-200) !important;
 }
 
 .bodyContainer .nav ul.leftmenu li:hover {
-	background-color: var(--background-color-500) !important;
+	background-color: var(--accent-bg-color-200) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .nav .leftmenu li a {
@@ -254,10 +230,6 @@ table thead {
 	background-image: var(--side-cloud-url) !important;
 }
 
-span {
-	color: var(--text-color-200) !important;
-}
-
 .article h1 span {
 	text-align: center !important;
 	width: 100% !important;
@@ -277,7 +249,7 @@ span {
 }
 
 strong {
-	color: var(--text-color-500) !important;
+	color: inherit !important;
 }
 
 .start-top {
@@ -291,6 +263,7 @@ strong {
 	width: 100% !important;
 	background-color: var(--background-color-300) !important;
 	border-right: 2px solid var(--background-color-200) !important;
+	color: var(--text-color-200) !important;
 }
 
 .start-left > a {
@@ -299,8 +272,8 @@ strong {
 
 .left-topic,
 .right-topic {
-	background-color: var(--background-color-400) !important;
-	color: var(--text-color-500) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 	border: unset !important;
 }
 
@@ -308,12 +281,14 @@ strong {
 	background-color: var(--background-color-200) !important;
 	border-radius: var(--border-radius) !important;
 	border: none !important;
+	color: var(--text-color-200) !important;
 }
 
 .start-right {
 	float: right !important;
 	background-color: var(--background-color-300) !important;
 	width: 189px !important;
+	color: var(--text-color-200) !important;
 }
 
 .lessonsTodayList {
@@ -324,6 +299,7 @@ strong {
 	border-radius: var(--border-radius) !important;
 	background-color: var(--background-color-200) !important;
 	padding: 1em 1.5em !important;
+	color: var(--text-color-200) !important;
 }
 
 h3 {
@@ -348,11 +324,13 @@ b {
 	background-position-x: 1rem;
 	border-radius: var(--border-radius) !important;
 	margin-right: 0.5rem !important;
+	color: var(--text-color-200) !important;
 }
 
 #toggleBarFlaerp,
 #toggleBar {
 	background-color: var(--background-color-500) !important;
+	color: var(--text-color-200) !important;
 }
 
 #toggleBarFlaerp {
@@ -367,6 +345,7 @@ b {
 #myToolsBox {
 	background-color: var(--background-color-400) !important;
 	width: 219px !important;
+	color: var(--text-color-200) !important;
 }
 
 .hide-menu-button,
@@ -388,17 +367,20 @@ b {
 
 .rtsLink,
 .headline {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .scheme-actions-students li * {
 	background-color: var(--background-color-400) !important;
 	padding: 0rem 1rem !important;
 	border-radius: var(--border-radius);
+	color: var(--text-color-200) !important;
 }
 
 .scheme-actions-students li *:hover {
-	background-color: var(--background-color-500);
+	background-color: var(--accent-bg-color-200);
+	color: var(--accent-text-color-100) !important;
 }
 
 .scheme-actions-students .timetable * {
@@ -425,6 +407,7 @@ table.time-table td.toggleEventBox,
 
 .time-table .emptyCell {
 	background-color: var(--background-color-200) !important;
+	color: var(--text-color-200) !important;
 }
 
 table.time-table td.resv-span6 {
@@ -442,13 +425,14 @@ table.time-table td.resv-span6 {
 }
 
 .actions li a {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--background-color-500) !important;
 	text-align: center !important;
 	text-indent: 0 !important;
 	width: unset !important;
 	padding: 1.5rem 2rem !important;
 	line-height: unset !important;
 	border-radius: var(--border-radius);
+	color: var(--text-color-200) !important;
 }
 
 .headline {
@@ -460,10 +444,12 @@ table.time-table td.resv-span6 {
 
 .deltagare-list {
 	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
 }
 
 .basicInfoPanel {
 	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
 	border: none !important;
 	margin-top: 0 !important;
 	border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
@@ -474,10 +460,11 @@ table.time-table td.resv-span6 {
 }
 
 .messagethread-metainfo {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
 	margin: unset !important;
 	margin-bottom: 1rem !important;
 	border-radius: var(--border-radius) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .messagethread-metainfo .search {
@@ -493,10 +480,12 @@ table.time-table td.resv-span6 {
 	margin-right: unset !important;
 	overflow: hidden;
 	border-radius: var(--border-radius) !important;
+	color: var(--text-color-200) !important;
 }
 
 .messagethread-client-toolbar {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .RadGrid {
@@ -528,18 +517,22 @@ table.time-table td.resv-span6 {
 	background-color: var(--background-color-500) !important;
 	border: none !important;
 	padding: 0.75rem 1rem !important;
+	color: var(--text-color-200) !important;
 }
 
 .messagethread-client-toolbar .single-actions .disabled {
 	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
 }
 
 .messagethread-list-toolbar > * {
 	background-color: var(--background-color-400) !important;
+	color: var(--text-color-200) !important;
 }
 
 .messagethread-list-toolbar .filter .current {
 	background-color: var(--background-color-500) !important;
+	color: var(--text-color-200) !important;
 }
 
 .messagethread-metainfo .meta-actions input {
@@ -554,10 +547,11 @@ table.time-table td.resv-span6 {
 }
 
 .profil-metainfo {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
 	border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
 	margin-right: unset !important;
 	margin-bottom: unset !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .friends-new {
@@ -583,9 +577,14 @@ table.time-table td.resv-span6 {
 	color: var(--text-color-200) !important;
 }
 
+.dataTable {
+	color: var(--text-color-200) !important;
+}
+
 .friends {
 	margin-top: 1rem !important;
 	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
 }
 
 .feed {
@@ -614,11 +613,13 @@ table.time-table td.resv-span6 {
 .guestbook-post {
 	background-color: var(--background-color-300) !important;
 	border: unset !important;
+	color: var(--text-color-200) !important;
 }
 
 .profil-left {
-	border-right: 2px solid var(--background-color-400) !important;
+	border-right: 2px solid var(--accent-bg-color-100) !important;
 	padding-right: 1rem !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .profil-right-bar {
@@ -633,11 +634,13 @@ table.time-table td.resv-span6 {
 
 .guestbook-metainfo {
 	margin-right: unset !important;
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .guestbook-top .multiline-input {
 	background-color: var(--background-color-500) !important;
+	color: var(--text-color-200) !important;
 }
 
 .guestbook-text {
@@ -650,26 +653,30 @@ table.time-table td.resv-span6 {
 
 .eventsOverviewControl table {
 	background-color: var(--background-color-200) !important;
+	color: var(--text-color-200) !important;
 	margin-top: 1rem !important;
 }
 
 .eventsOverviewControl .monthHeadline {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
 	margin-top: 1rem !important;
 	padding-inline: 1rem !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .eventsOverviewControl table tr .DayInfo:nth-child(even) {
 	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
 }
 
 .eventsOverviewControl table tr .WeekTD {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .eventsOverviewControl table tr th {
-	background-color: var(--background-color-400) !important;
-	color: var(--text-color-200) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .eventsOverviewControl .monthHeadline .NextMonthLB {
@@ -681,11 +688,13 @@ table.time-table td.resv-span6 {
 }
 
 .eventsOverviewControl .lessonObject {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .eventsOverviewControl .lessonObject:hover {
-	background-color: var(--background-color-500) !important;
+	background-color: var(--accent-bg-color-200) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .eventsOverviewControl .vacantDayObject {
@@ -704,12 +713,14 @@ table.time-table td.resv-span6 {
 
 .myschool .lunch dt {
 	margin: unset !important;
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .myschool .lunch dd {
 	background-color: var(--background-color-300) !important;
 	padding-top: 1rem !important;
+	color: var(--text-color-200) !important;
 }
 
 .fileList td {
@@ -719,6 +730,7 @@ table.time-table td.resv-span6 {
 .education-menu li {
 	background-color: var(--background-color-300) !important;
 	border-bottom: 1px solid var(--background-color-400) !important;
+	color: var(--text-color-200) !important;
 }
 
 .education-menu {
@@ -728,12 +740,13 @@ table.time-table td.resv-span6 {
 
 .list tr:nth-child(even) {
 	background-color: var(--background-color-400) !important;
+	color: var(--text-color-200) !important;
 }
 
 .judgementPostBox {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
 	border: unset !important;
-	color: var(--text-color-500) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 #judgementLogContainer2 {
@@ -742,21 +755,23 @@ table.time-table td.resv-span6 {
 }
 
 a.saveButton {
-	background-color: var(--background-color-500) !important;
+	background-color: var(--accent-bg-color-200) !important;
 	border: unset !important;
 	border-radius: var(--border-radius) !important;
 	padding: 0.5rem 1rem !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .pageSubHeadline {
-	background-color: var(--background-color-400) !important;
-	color: var(--text-color-500) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 	margin: unset !important;
 	border-radius: var(--border-radius) !important;
 }
 
 .curriculumCourses .RadGrid .rgMasterTable .rgHeader {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .curriculumCourses .RadGrid .rgMasterTable {
@@ -770,11 +785,13 @@ a.saveButton {
 .RadGrid_Default .rgMasterTable td.rgExpandCol,
 .curriculumCourses .RadGrid .rgMasterTable .rgFooter td {
 	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
 }
 
 .curriculumCourses .RadGrid .rgMasterTable .rgAltRow,
 .curriculumCourses table .rgRow {
 	background-color: var(--background-color-200) !important;
+	color: var(--text-color-200) !important;
 }
 
 .RadGrid_Default {
@@ -782,14 +799,15 @@ a.saveButton {
 }
 
 .headerAttendance {
-	background-color: var(--background-color-400) !important;
+	background-color: var(--accent-bg-color-100) !important;
 	margin: unset !important;
 	margin-top: 1rem !important;
-	color: var(--text-color-500) !important;
+	color: var(--accent-text-color-100) !important;
 }
 
 .attendanceCoursePanel {
 	background-color: var(--background-color-300) !important;
+	color: var(--text-color-200) !important;
 	border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
 }
 
