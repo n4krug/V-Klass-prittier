@@ -1,6 +1,6 @@
 :root {
-	--background-color-100: hsl(250, 5%, 77.5%) !important;
-	--background-color-200: hsl(250, 5%, 85%) !important;
+	--background-color-100: hsl(250, 10%, 80%) !important;
+	--background-color-200: hsl(250, 10%, 85%, 80%) !important;
 	--background-color-300: hsl(252, 10%, 90%) !important;
 	--background-color-400: hsl(250, 15%, 95%) !important;
 	--background-color-500: hsl(250, 15%, 100%) !important;
@@ -64,4 +64,50 @@
 #toggleBarFlaerpClick {
 	border-top: 3px solid white;
 	border-radius: var(--border-radius) !important;
+}
+
+body,
+body::before,
+body::after {
+	background-repeat: repeat;
+	animation: snow 10s linear infinite;
+	background-size: cover;
+	position: relative;
+}
+
+body::before,
+body::after {
+	content: "";
+	background-image: inherit;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: -9999;
+}
+
+body::before {
+	animation-duration: 8s;
+	background-position-x: 100px;
+}
+
+body::after {
+	animation-duration: 12s;
+	background-position-x: 700px;
+}
+
+@keyframes snow {
+	0% {
+		background-position-y: 0vh;
+	}
+	100% {
+		background-position-y: 100vh;
+	}
+}
+
+.nav,
+.article {
+	backdrop-filter: blur(4px);
 }

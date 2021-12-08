@@ -9,6 +9,10 @@ function changeImages(vellinge_url) {
      console.log("image changed")
 }
 
+function addSnow(snow_url) {
+    document.getElementById("ctl00_pagebody").style.setProperty("background-image", `url("${snow_url}")`, 'important');
+}
+
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     // tabId = tabs[0].id
@@ -64,8 +68,8 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         chrome.storage.sync.get("colorScheme", ({colorScheme}) => {
             if (colorScheme != "none") {
                 if (tab.url.startsWith("https://www.vklass.se/")) {
-                 
                     vellinge_url = chrome.runtime.getURL(`images/${colorScheme}_vellinge.svg`);
+                    
                     chrome.scripting.executeScript({
                         target: {tabId: tabId},
                         // files: ["client.js"],
@@ -74,6 +78,19 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                     }, () => {
                         console.log("Changed images");
                     });
+
+                    if (colorScheme === "christmas") {
+                        snow_url = chrome.runtime.getURL("images/snow.svg");
+
+                        chrome.scripting.executeScript({
+                            target: {tabId: tabId},
+                            // files: ["client.js"],
+                            func: addSnow,
+                            args: [snow_url]
+                        }, () => {
+                            console.log("Changed images");
+                        });
+                    }
                 }
             }
         })
