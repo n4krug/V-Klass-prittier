@@ -9,12 +9,15 @@ function changeImages(vellinge_url) {
      console.log("image changed")
 }
 
-function addSnow(snow_url, bg_url) {
+function addSnow(snow_url) {
     const background_div = document.createElement("div");
     background_div.id = "background_div";
     background_div.style.setProperty("background-image", `url("${snow_url}")`, 'important');
     document.getElementById("ctl00_pagebody").appendChild(background_div);
 
+}
+
+function setBG(bg_url) {
     document.getElementById("ctl00_pagebody").style.setProperty("background-image", `url("${bg_url}")`, 'important');
 }
 
@@ -98,13 +101,32 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
                     if (colorScheme === "christmas") {
                         snow_url = chrome.runtime.getURL("images/snow.svg");
-                        bg_url = chrome.runtime.getURL("images/snowy-forest-bg.svg");
-
+                        
                         chrome.scripting.executeScript({
                             target: {tabId: tabId},
                             // files: ["client.js"],
                             func: addSnow,
-                            args: [snow_url, bg_url]
+                            args: [snow_url]
+                        }, () => {
+                            console.log("Changed images");
+                        });
+                        
+                        bg_url = chrome.runtime.getURL("images/snowy-forest-bg.svg");
+                        chrome.scripting.executeScript({
+                            target: {tabId: tabId},
+                            // files: ["client.js"],
+                            func: setBG,
+                            args: [bg_url]
+                        }, () => {
+                            console.log("Changed images");
+                        });
+                    } else if (colorScheme === "dark-forest") {
+                        bg_url = chrome.runtime.getURL("images/dark-forest-bg.svg");
+                        chrome.scripting.executeScript({
+                            target: {tabId: tabId},
+                            // files: ["client.js"],
+                            func: setBG,
+                            args: [bg_url]
                         }, () => {
                             console.log("Changed images");
                         });
