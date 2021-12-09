@@ -66,44 +66,61 @@
 	border-radius: var(--border-radius) !important;
 }
 
-body,
-body::before,
-body::after {
-	background-repeat: repeat;
-	animation: snow 10s linear infinite;
-	background-size: cover;
+.metainfo {
+	min-height: 3rem;
+}
+
+body {
 	position: relative;
 }
 
-body::before,
-body::after {
+#background_div {
+	background-size: 0%;
+	/* overflow: hidden !important; */
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100% !important;
+	overflow: hidden;
+	z-index: -1;
+}
+
+#background_div::before,
+#background_div::after {
+	background-repeat: repeat;
+	animation: snow 10s linear infinite;
+	background-size: auto 100vh;
+	position: relative;
 	content: "";
 	background-image: inherit;
 	display: block;
 	position: absolute;
-	top: 0;
-	bottom: 0;
+	top: -100vh;
+	/* bottom: 0; */
 	right: 0;
 	left: 0;
+	/* width: 200rem; */
+	height: calc(100vh + 100%);
 	z-index: -9999;
 }
 
-body::before {
+#background_div::before {
 	animation-duration: 8s;
 	background-position-x: 100px;
 }
 
-body::after {
+#background_div::after {
 	animation-duration: 12s;
 	background-position-x: 700px;
 }
 
 @keyframes snow {
 	0% {
-		background-position-y: 0vh;
+		transform: translateY(0vh);
 	}
 	100% {
-		background-position-y: 100vh;
+		transform: translateY(100vh);
 	}
 }
 
