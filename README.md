@@ -1,6 +1,6 @@
 # V-Klass ++
 ## Installation
-To install put [chrome://extensions](url) in the browser and simply pull the `.zip` file from https://github.com/n4krug/V-Klass-prittier/releases/latest into the browser window.
+To install put [chrome://extensions](url) in the browser and simply pull the `.zip` file from [releases/latest](https://github.com/n4krug/V-Klass-prittier/releases/latest) into the browser window.
 
 Releases hopefully coming to Chrome Web Store soon™
 
