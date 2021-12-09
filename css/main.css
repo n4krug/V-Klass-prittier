@@ -16,7 +16,7 @@ html {
 body {
 	padding-block: 5rem !important;
 	margin: 0;
-	min-height: unset !important;
+	min-height: calc(100vh - 10rem) !important;
 }
 
 p {

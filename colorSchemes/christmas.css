@@ -72,6 +72,9 @@
 
 body {
 	position: relative;
+	background-position: center bottom;
+	background-size: cover;
+	z-index: -1;
 }
 
 #background_div {
