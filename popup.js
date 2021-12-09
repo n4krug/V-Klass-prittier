@@ -27,8 +27,8 @@ avaliableSchemes = ["none", "midnight", "midday", "darkness", "dark-mint", "dark
 // color_scheme_inp.selectedIndex = avaliableSchemes.indexOf(current_color_scheme)
 
 chrome.storage.sync.get(["runAnimation"], result => {
-    console.log(result.runAnimation)
-    if (result.runAnimation == "" || result.runAnimation == null || result.runAnimation == undefined) {
+    console.log(Boolean(result.runAnimation));
+    if (result.runAnimation == null || result.runAnimation == undefined) {
         console.log("state not set")
         chrome.storage.sync.set({ "runAnimation": "true" }, () => {})
         
@@ -61,11 +61,16 @@ let animation_check = document.getElementById("animation-check");
 animation_check.addEventListener("change", () => {
     let animation_state = animation_check.checked;
 
-    // console.log(animation_state)
+    console.log("animation state:" + animation_state)
 
-    chrome.storage.sync.set({ "runAnimation": String(animation_state) }, () => {})
+    chrome.storage.sync.set({ "runAnimation": animation_state }, () => {})
 
+    chrome.storage.sync.get(["runAnimation"], result => {
+        
+        console.log(result)
+    })
+    
     chrome.tabs.reload()
 
-    location.reload()
+    // location.reload()
 });

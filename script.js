@@ -10,7 +10,12 @@ function changeImages(vellinge_url) {
 }
 
 function addSnow(snow_url) {
-    document.getElementById("ctl00_pagebody").style.setProperty("background-image", `url("${snow_url}")`, 'important');
+    const background_div = document.createElement("div");
+    background_div.id = "background_div";
+    background_div.style.setProperty("background-image", `url("${snow_url}")`, 'important');
+    document.getElementById("ctl00_pagebody").appendChild(background_div);
+
+
 }
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
@@ -45,6 +50,17 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                         console.log("Inserted");
                     });
 
+                    chrome.storage.sync.get(["runAnimation"], result => {
+                        if (result.runAnimation == false) {
+                            chrome.scripting.insertCSS({
+                                target: {tabId: tabId},
+                                files: ["no_animations.css"]
+                            }, () => {
+                                console.log("Inserted no_animations.css");
+                            });
+                        }
+                    })
+
                 }
                 
                 chrome.action.setIcon({path: { 
@@ -52,6 +68,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                     48: `icons/${colorScheme}_icon_48.png`,
                    128: `icons/${colorScheme}_icon_128.png` 
                 }})
+                
                 
             } else {
                 chrome.action.setIcon({path: { 

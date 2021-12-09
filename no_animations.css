@@ -1,3 +1,5 @@
-* {
-	animation-duration: 0 !important;
+*,
+*::before,
+*::after {
+	animation-duration: 0s !important;
 }
