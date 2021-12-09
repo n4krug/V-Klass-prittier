@@ -1,9 +1,9 @@
 :root {
-	--background-color-100: hsl(200, 49%, 10%) !important;
-	--background-color-200: hsl(200, 40%, 20%) !important;
-	--background-color-300: hsl(200, 30%, 30%) !important;
-	--background-color-400: hsl(200, 20%, 40%) !important;
-	--background-color-500: hsl(200, 10%, 50%) !important;
+	--background-color-100: hsl(220, 49%, 10%) !important;
+	--background-color-200: hsl(220, 40%, 20%) !important;
+	--background-color-300: hsl(220, 29%, 30%) !important;
+	--background-color-400: hsl(220, 20%, 40%) !important;
+	--background-color-500: hsl(221, 10%, 50%) !important;
 
 	--text-color-500: hsl(209, 100%, 95%);
 	--text-color-200: hsl(210, 100%, 90%);

@@ -80,12 +80,11 @@ span {
 }
 
 .scoreboard {
-	left: 32.5rem !important;
-	width: calc(100vw - 65rem) !important;
+	width: calc(100vw - 60rem) !important;
 	max-width: 74rem !important;
 	min-width: 518px !important;
 	left: 0 !important;
-	margin-left: 32.5rem;
+	margin-left: 30rem;
 }
 
 #ctl00_PageLogo {
@@ -181,7 +180,6 @@ span {
 
 .bodyContainer .nav ul.leftmenu li:hover {
 	background-color: var(--background-color-500) !important;
-	color: var(--accent-text-color-100) !important;
 }
 
 .nav .leftmenu li a {
@@ -836,4 +834,8 @@ a.saveButton {
 
 .SummaryAttendance {
 	color: var(--text-color-200) !important;
+}
+
+#ctl00_ContentPlaceHolder2_resultsPanel > div {
+	background-color: var(--background-color-400) !important;
 }
