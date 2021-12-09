@@ -2,8 +2,8 @@
     "manifest_version": 3,
    
     "name": "V-Klass ++",
-    "version": "1.0.0",
-    "description": "Makes V-Klass prittier and adds color themes",
+    "version": "1.0.1",
+    "description": "Makes V-Klass prittier and adds color themes and effects",
    
     "background": {
         "service_worker": "script.js"
