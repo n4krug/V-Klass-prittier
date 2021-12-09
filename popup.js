@@ -1,8 +1,8 @@
 // const submit_btn = document.getElementById("submit-btn");
 
-let current_color_scheme = chrome.storage.sync.get("colorScheme")
+// let current_color_scheme = chrome.storage.sync.get("colorScheme")
 chrome.storage.sync.get(["colorScheme"], result => {
-    console.log(result)
+    // console.log(result)
     
     var cssId = 'myCss';  // you could encode the css path itself to generate id..
     if (!document.getElementById(cssId))
@@ -26,6 +26,21 @@ avaliableSchemes = ["none", "midnight", "midday", "darkness", "dark-mint", "dark
 
 // color_scheme_inp.selectedIndex = avaliableSchemes.indexOf(current_color_scheme)
 
+chrome.storage.sync.get(["runAnimation"], result => {
+    console.log(result.runAnimation)
+    if (result.runAnimation == "" || result.runAnimation == null || result.runAnimation == undefined) {
+        console.log("state not set")
+        chrome.storage.sync.set({ "runAnimation": "true" }, () => {})
+        
+        // chrome.tabs.reload()
+        
+        // location.reload()
+    } else {
+        document.getElementById("animation-check").checked = result.runAnimation;
+        console.log("gui updated")
+    }
+})
+
 
 document.getElementById("color-scheme-select").addEventListener("change", () => {
     
@@ -40,4 +55,17 @@ document.getElementById("color-scheme-select").addEventListener("change", () => 
 
     location.reload()
 
+});
+
+let animation_check = document.getElementById("animation-check");
+animation_check.addEventListener("change", () => {
+    let animation_state = animation_check.checked;
+
+    // console.log(animation_state)
+
+    chrome.storage.sync.set({ "runAnimation": String(animation_state) }, () => {})
+
+    chrome.tabs.reload()
+
+    location.reload()
 });
