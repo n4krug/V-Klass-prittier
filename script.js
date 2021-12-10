@@ -39,7 +39,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.status === "loading") {
         chrome.storage.sync.get("colorScheme", ({colorScheme}) => {
             if (colorScheme != "none") {
-                if (tab.url.startsWith("https://www.vklass.se/")) {
+                if (tab.url.startsWith("https://www.vklass.se/") && !tab.url.startsWith("https://www.vklass.se/administration")) {
                     chrome.scripting.insertCSS({
                         target: {tabId: tabId},
                         files: [`colorSchemes/${colorScheme}.css`]
@@ -87,7 +87,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.status === "loading") {
         chrome.storage.sync.get("colorScheme", ({colorScheme}) => {
             if (colorScheme != "none") {
-                if (tab.url.startsWith("https://www.vklass.se/")) {
+                if (tab.url.startsWith("https://www.vklass.se/") && !tab.url.startsWith("https://www.vklass.se/administration")) {
                     vellinge_url = chrome.runtime.getURL(`images/${colorScheme}_vellinge.svg`);
                     
                     chrome.scripting.executeScript({
