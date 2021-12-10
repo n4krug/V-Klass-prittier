@@ -16,7 +16,8 @@
     ],
 
     "host_permissions": [
-        "https://www.vklass.se/"
+        "https://www.vklass.se/",
+        "https://vklass.se/"
     ],
 
     "action": {
@@ -31,7 +32,7 @@
     "web_accessible_resources": [
         {
             "resources": ["images/*.*"],
-            "matches": ["https://www.vklass.se/*"]
+            "matches": ["https://www.vklass.se/*", "https://vklass.se/*"]
         }
     ],
 

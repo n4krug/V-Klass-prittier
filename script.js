@@ -2,7 +2,7 @@ function changeImages(vellinge_url) {
     vellinge_logo = document.getElementById("ctl00_PageLogo");
         
          // vellinge_url = chrome.extension.getURL("images/Vellinge.svg");
-    if (vellinge_logo.src == "https://www.vklass.se/graphics/org_708355F2-915F-47D9-997E-C659F2AF448A.png") {
+    if (vellinge_logo.src == "https://www.vklass.se/graphics/org_708355F2-915F-47D9-997E-C659F2AF448A.png" || vellinge_logo.src == "https://vklass.se/graphics/org_708355F2-915F-47D9-997E-C659F2AF448A.png") {
 
         console.log(vellinge_url)
 
@@ -42,7 +42,9 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.status === "loading") {
         chrome.storage.sync.get("colorScheme", ({colorScheme}) => {
             if (colorScheme != "none") {
-                if (tab.url.startsWith("https://www.vklass.se/") && !tab.url.startsWith("https://www.vklass.se/administration")) {
+                console.log(tab.url.startsWith("https://www.vklass.se/"))
+                if ((tab.url.startsWith("https://www.vklass.se/") || tab.url.startsWith("https://vklass.se/") ) && (!tab.url.startsWith("https://www.vklass.se/administration/") || !tab.url.startsWith("https://vklass.se/administration/"))) {
+                    console.log("url matches")
                     chrome.scripting.insertCSS({
                         target: {tabId: tabId},
                         files: [`colorSchemes/${colorScheme}.css`]
@@ -73,7 +75,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                     16: `icons/${colorScheme}_icon_16.png`,
                     48: `icons/${colorScheme}_icon_48.png`,
                    128: `icons/${colorScheme}_icon_128.png` 
-                }})
+                }}, () => {})
                 
                 
             } else {
@@ -81,7 +83,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                     16: `icons/default_icon_16.png`,
                     48: `icons/default_icon_48.png`,
                    128: `icons/default_icon_128.png` 
-                }})
+                }}, () => {})
             }
         })
         
@@ -90,7 +92,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.status === "loading") {
         chrome.storage.sync.get("colorScheme", ({colorScheme}) => {
             if (colorScheme != "none") {
-                if (tab.url.startsWith("https://www.vklass.se/") && !tab.url.startsWith("https://www.vklass.se/administration")) {
+                if ((tab.url.startsWith("https://www.vklass.se/") || tab.url.startsWith("https://vklass.se/") ) && (!tab.url.startsWith("https://www.vklass.se/administration/") || !tab.url.startsWith("https://vklass.se/administration/"))) {
                     vellinge_url = chrome.runtime.getURL(`images/${colorScheme}_vellinge.svg`);
                     
                     chrome.scripting.executeScript({
