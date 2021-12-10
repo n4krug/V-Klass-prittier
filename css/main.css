@@ -101,6 +101,8 @@ span {
 
 .nav {
 	display: block !important;
+	height: calc(100% - 3px) !important;
+	width: 190px !important;
 }
 
 .nav h2 {
