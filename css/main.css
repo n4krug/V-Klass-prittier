@@ -13,6 +13,11 @@ html {
 	color: var(--text-color-200) !important;
 }
 
+h5 {
+	background-color: var(--accent-color-200) !important;
+	color: var(--accent-text-color-100) !important;
+}
+
 body {
 	padding-block: 5rem !important;
 	margin: 0;
@@ -605,7 +610,8 @@ table.time-table td.resv-span6 {
 	color: var(--text-color-200) !important;
 }
 
-.profile-feed {
+.profile-feed,
+.messagethread-read-post {
 	background-color: unset !important;
 }
 
