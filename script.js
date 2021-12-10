@@ -1,12 +1,15 @@
 function changeImages(vellinge_url) {
-     vellinge_logo = document.getElementById("ctl00_PageLogo");
+    vellinge_logo = document.getElementById("ctl00_PageLogo");
         
          // vellinge_url = chrome.extension.getURL("images/Vellinge.svg");
-     console.log(vellinge_url)
+    if (vellinge_logo.src == "https://www.vklass.se/graphics/org_708355F2-915F-47D9-997E-C659F2AF448A.png") {
 
-     vellinge_logo.src = vellinge_url;
+        console.log(vellinge_url)
 
-     console.log("image changed")
+        vellinge_logo.src = vellinge_url;
+
+        console.log("image changed")
+    }
 }
 
 function addSnow(snow_url) {
