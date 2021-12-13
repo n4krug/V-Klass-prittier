@@ -2,7 +2,7 @@
     "manifest_version": 3,
    
     "name": "VKlass++",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Makes V-Klass prettier and adds color themes and effects",
    
     "background": {
