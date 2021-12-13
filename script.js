@@ -104,7 +104,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                         console.log("Changed images");
                     });
 
-                    if (colorScheme === "christmas") {
+                    if (colorScheme === "christmas" || colorScheme === "dark-christmas") {
                         snow_url = chrome.runtime.getURL("images/snow.svg");
                         
                         chrome.scripting.executeScript({
