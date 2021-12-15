@@ -115,3 +115,18 @@ option {
 .slider.round:before {
 	border-radius: 50%;
 }
+
+.custom-theme-div {
+	margin-top: 1rem;
+}
+
+.custom-theme-div input {
+	border: 0;
+	padding: 0;
+	width: 2rem;
+	height: 2rem;
+}
+
+.custom-theme-div label {
+	width: 100%;
+}
