@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VKlass Settings</title>
+    <link rel="stylesheet" href="control-page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body id="root">
+    <h1 id="title">Custom VKlass Themes</h1>
+    <!-- --background-color-100: #bdccdb !important;
+	--background-color-200: #cdd9e4 !important;
+	--background-color-300: #dee6ed !important;
+	--background-color-400: #eef2f6 !important;
+	--background-color-500: #ffffff !important;
+
+	--text-color-500: #001a33;
+	--text-color-200: #003366;
+
+	--accent-color-100: #ff9999 !important;
+	--accent-color-200: #ff6666 !important;
+
+	--accent-bg-color-100: #3d99f5 !important;
+	--accent-bg-color-200: #1980e6 !important;
+
+	--accent-text-color-100: #ffffff !important; -->
+    <div class="controls column">
+        <h2>Dark logo:</h2>
+        <div class="logo-toggle">
+            <label class="switch">
+                <input type="checkbox"  id="logo-check" checked>
+                <span class="slider round"></span>
+              </label>
+        </div>
+
+        <h2>Background colors:</h2>
+        <div class="bg-colors colors">
+            <div id="bg-100-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#bdccdb" id="bg-100-picker">
+            </div>
+            <div id="bg-200-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#cdd9e4" id="bg-200-picker">
+            </div>
+            <div id="bg-300-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#dee6ed" id="bg-300-picker">
+            </div>
+            <div id="bg-400-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#eef2f6" id="bg-400-picker">
+            </div>
+            <div id="bg-500-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#ffffff" id="bg-500-picker">
+            </div>
+        </div>
+        <h2>Text colors:</h2>
+        <div class="text-colors colors">
+            <div id="text-500-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#001a33" id="text-500-picker">
+            </div>
+            <div id="text-200-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#003366" id="text-200-picker">
+            </div>
+            <div id="accent-text-100-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#ffffff" id="accent-text-100-picker">
+            </div>
+        </div>
+        <h2>Accent colors:</h2>
+        <div class="accent-colors colors">
+            <div id="accent-bg-100-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#3d99f5" id="accent-bg-100-picker">
+            </div>
+            <div id="accent-bg-200-wrapper" class="color-picker-wrapper">
+                <input type="color" value="#1980e6" id="accent-bg-200-picker">
+            </div>
+        </div>
+        <div class="save-inputs">
+            <input type="text" placeholder="Theme name" id="save-inp">
+            <input type="button" value="Save Theme" id="save-btn">
+            <input type="button" value="Reset Themes" id="reset-btn">
+        </div>
+    </div>
+    <div class="preview-cont column">
+        <div class="preview">
+            <div class="nav">
+                <img src="images/midday_vellinge.svg" alt="vellinge logga" id="logo">
+                <div class="searchbox">Search...</div>
+                <div class="navbtns">
+                    <div class="btn">Button</div>
+                    <div class="btn">Button</div>
+                    <div class="btn">Button</div>
+                    <div class="btn">Button</div>
+                    <div class="btn">Button</div>
+                    <div class="btn">Button</div>
+                    <div class="btn">Button</div>
+                    <div class="btn">Button</div>
+                    <div class="btn">Button</div>
+                    <div class="btn">Button</div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="top-nav">
+                    <div class="top-nav-btn">Button</div>
+                    <div class="top-nav-btn">Button</div>
+                    <div class="top-nav-btn">Button</div>
+                    <div class="top-nav-btn">Button</div>
+                </div>
+                <h2 class="preview-title">Title</h2>
+                <div class="subtitle">Info title</div>
+                <div class="feed">
+                    <div class="feed-title">
+                        News feed
+                    </div>
+                    <div class="feed-content">
+                        <div class="article">
+                            <h3 class="article-title">Title</h3>
+                            <p class="article-subtitle">Author</p>
+                            <p class="article-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, tempora.</p>
+                        </div>
+                        <div class="article">
+                            <h3 class="article-title">Title</h3>
+                            <p class="article-subtitle">Author</p>
+                            <p class="article-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, tempora.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="control-page.js"></script>
+</body>
+</html>

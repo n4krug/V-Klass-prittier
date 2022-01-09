@@ -1,20 +1,20 @@
 :root {
-	--background-color-100: hsl(210, 30%, 80%) !important;
-	--background-color-200: hsl(210, 30%, 85%) !important;
-	--background-color-300: hsl(210, 30%, 90%) !important;
-	--background-color-400: hsl(210, 30%, 95%) !important;
-	--background-color-500: hsl(210, 30%, 100%) !important;
+	--background-color-100: #bdccdb !important;
+	--background-color-200: #cdd9e4 !important;
+	--background-color-300: #dee6ed !important;
+	--background-color-400: #eef2f6 !important;
+	--background-color-500: #ffffff !important;
 
 	--text-color-500: #001a33;
-	--text-color-200: hsl(210, 100%, 20%);
+	--text-color-200: #003366;
 
-	--accent-color-100: hsl(0, 100%, 80%) !important;
-	--accent-color-200: hsl(0, 100%, 70%) !important;
+	--accent-color-100: #ff9999 !important;
+	--accent-color-200: #ff6666 !important;
 
-	--accent-bg-color-100: hsl(210, 90%, 60%) !important;
-	--accent-bg-color-200: hsl(210, 80%, 50%) !important;
+	--accent-bg-color-100: #3d99f5 !important;
+	--accent-bg-color-200: #1980e6 !important;
 
-	--accent-text-color-100: hsl(0, 70%, 100%) !important;
+	--accent-text-color-100: #ffffff !important;
 
 	--home-profile-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 24 24"><path fill="%23001a33" d="M12,3L2,12H5V20H19V12H22L12,3M12,8.75A2.25,2.25 0 0,1 14.25,11A2.25,2.25 0 0,1 12,13.25A2.25,2.25 0 0,1 9.75,11A2.25,2.25 0 0,1 12,8.75M12,15C13.5,15 16.5,15.75 16.5,17.25V18H7.5V17.25C7.5,15.75 10.5,15 12,15Z"></path></svg>') !important;
 	--messages-url: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 24 24"><path fill="%23001a33" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path></svg>') !important;

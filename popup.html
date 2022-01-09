@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <label>Color Scheme:</label>
@@ -22,6 +25,9 @@
             <option value="lunarstorm">Lunarstorm</option>
             <option value="none">Default</option>
         </optgroup>
+        <optgroup label="Custom Themes" id="custom-themes-group">
+
+        </optgroup>
     </select>
     <!-- <button name="submit" id="submit-btn" type="submit">Change</button> -->
     <div class="animation-toggle">
@@ -29,10 +35,13 @@
         <label class="switch">
             <input type="checkbox"  id="animation-check">
             <span class="slider round"></span>
-          </label>
+        </label>
     </div>
     
     <div class="custom-theme-div">
+        <!-- <input class="btn" type="button" value="Manage custom themes" id="custom-themes-btn"> -->
+        <button id="custom-themes-btn">Manage Custom Themes</button>
+        <!-- 
         <div class="bg-colors">
             <label>Background colors:</label>
             <input type="color" name="bg-100" id="bg-100">
@@ -53,7 +62,7 @@
             <label>Text color:</label>
             <input type="color" name="text-100" id="text-100">
             <input type="color" name="text-200" id="text-200">
-        </div>
+        </div> -->
     </div>
     <script src="popup.js"></script>
 </body>
