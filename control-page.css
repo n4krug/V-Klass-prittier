@@ -35,9 +35,9 @@
 }
 
 #title {
-	position: absolute;
+	/* position: absolute;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translateX(-50%); */
 	font-size: 2rem;
 	top: 10rem;
 }
