@@ -445,7 +445,8 @@ table.time-table td.toggleEventBox,
 	color: var(--text-color-200) !important;
 }
 
-table.time-table td.resv-span6 {
+table.time-table td.resv-span6,
+table.time-table td.resv-span3 {
 	background-color: var(--background-color-400) !important;
 	color: var(--text-color-500) !important;
 	border-color: var(--background-color-100) !important;
